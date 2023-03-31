@@ -1,0 +1,75 @@
+C:\Users\aboub\source\repos\Project Final\Project Final\bin\Debug\Project Final.exe.config
+C:\Users\aboub\source\repos\Project Final\Project Final\bin\Debug\Project Final.exe
+C:\Users\aboub\source\repos\Project Final\Project Final\bin\Debug\Project Final.pdb
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.csproj.AssemblyReference.cache
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.csproj.SuggestedBindingRedirects.cache
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.Form1.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.csproj.CoreCompileInputs.cache
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.exe
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project Final.pdb
+C:\Users\aboub\source\repos\Project Final\Project Final\bin\Debug\Database1.mdf
+C:\Users\aboub\source\repos\Project Final\Project Final\bin\Debug\Database1_log.ldf
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.accountant.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.admin.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.warehousem.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.ICmanager.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.Staff.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.Users.resources
+C:\Users\aboub\source\repos\Project Final\Project Final\obj\Debug\Project_Final.Form8.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.csproj.AssemblyReference.cache
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.csproj.SuggestedBindingRedirects.cache
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form1.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form10.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form11.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form12.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form13.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form14.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form15.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.accountant.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.admin.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.warehousem.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.ICmanager.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Staff.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Users.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form8.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Form9.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.csproj.CoreCompileInputs.cache
+C:\Users\wally\Desktop\Project Final\Project Final\bin\Debug\Database1.mdf
+C:\Users\wally\Desktop\Project Final\Project Final\bin\Debug\Database1_log.ldf
+C:\Users\wally\Desktop\Project Final\Project Final\bin\Debug\Project Final.exe.config
+C:\Users\wally\Desktop\Project Final\Project Final\bin\Debug\Project Final.exe
+C:\Users\wally\Desktop\Project Final\Project Final\bin\Debug\Project Final.pdb
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.exe
+C:\Users\wally\Desktop\Project Final\Project Final\obj\Debug\Project Final.pdb
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\bin\Debug\Database1.mdf
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\bin\Debug\Database1_log.ldf
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\bin\Debug\Project Final.exe.config
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\bin\Debug\Project Final.exe
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\bin\Debug\Project Final.pdb
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form1.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form10.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form11.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form12.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form13.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form14.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form15.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.accountant.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.admin.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.warehousem.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.ICmanager.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Staff.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Users.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form8.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Form9.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.exe
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project Final.pdb
+C:\Users\User\OneDrive\Desktop\Project Final\Project Final\Project Final\obj\Debug\Project_Final.Menuform.resources
