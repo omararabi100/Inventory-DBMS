@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -9,6 +10,8 @@ namespace Project_Final
         SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
 
         public bool Gender;
+        public bool isSelected = false;
+        public bool isLogin = false;
         public Form12()
         {
             InitializeComponent();
@@ -36,25 +39,34 @@ namespace Project_Final
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Name.Text = "";
-            ID.Text = "";
-            Email.Text = "";
-            Uname.Text = "";
-            Password.Text = "";
+            txtName.Text = "";
+            txtID.Text = "";
+            txtEmail.Text = "";
+            txtUname.Text = "";
+            txtPassword.Text = "";
 
         }
 
         private void Male_CheckedChanged(object sender, EventArgs e)
         {
-            if (Male.Checked)
+            isSelected = true;
+            if (RBMale.Checked)
             {
                 Gender = true;
+                RBFemale.Checked = false;
             }
-            else
+
+        }
+        private void RBFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            isSelected = true;
+            if (RBFemale.Checked)
             {
                 Gender = false;
+                RBMale.Checked = false;
             }
         }
+
 
         private void positionComb_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -66,15 +78,45 @@ namespace Project_Final
 
             try
             {
+                if(Con.State != ConnectionState.Open)
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Admin values('" + int.Parse(ID.Text) + "',' " + Uname.Text + "','" + Name.Text + "','" + int.Parse(Age.Text) + "','" + Gender + "','" + Email.Text + "','"+Date.Text+"')", Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("User added successfully");
+
+                    SqlCommand cmd = new SqlCommand("addLogin", Con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@UserName", txtUname.Text);
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+
+                    if (positionComb.SelectedItem.ToString() == "Administrator")
+                    {
+                        SqlCommand cmd1 = new SqlCommand("AddAdmin", Con);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        
+                        cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
+                    cmd1.Parameters.AddWithValue("@ADID", int.Parse(txtID.Text));
+                    cmd1.Parameters.AddWithValue("@Name", txtName.Text);
+                        cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
+                        if (isSelected)
+                        {
+                            cmd1.Parameters.AddWithValue("@GENDER", Gender);
+                        }
+                        else
+                        {
+                            cmd1.Parameters.AddWithValue("@GENDER", null);
+                        }
+                        cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
+                        cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                     cmd.Parameters.AddWithValue("@LogInType", "Admin");
+                        cmd.ExecuteNonQuery();
+                     cmd1.ExecuteNonQuery();
+                        MessageBox.Show("Admin added successfully");
+                }
+                if(Con.State == ConnectionState.Open)
                 Con.Close();
             }
-            catch
+            catch (Exception msj)
             {
-
+                MessageBox.Show("something went wrong!!!");
             }
         }
 
@@ -87,5 +129,7 @@ namespace Project_Final
         {
 
         }
+
+
     }
 }

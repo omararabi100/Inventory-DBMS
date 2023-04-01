@@ -1,26 +1,26 @@
 ﻿INSERT INTO 
-LogIn Values('AWES312','anything')
+LogIn Values('AWES312','anything','Accountant')
 
 INSERT INTO 
-LogIn Values('WHMNEH723','hello')
+LogIn Values('WHMNEH723','hello','WareHouseManager')
 
 INSERT INTO 
-LogIn Values('ICMOA1231','how')
+LogIn Values('ICMOA1231','how','InventoryControlManager')
 
 INSERT INTO 
-LogIn Values('ADAB529','are')
+LogIn Values('ADAB529','are','Admin')
 
 INSERT INTO 
-LogIn Values('SL620','you')
+LogIn Values('SL620','you','Staff')
 
 INSERT INTO 
-LogIn Values('CS620','Are')
+LogIn Values('CS620','Are','Staff')
 
 INSERT INTO 
-LogIn Values('AM620','My')
+LogIn Values('AM620','My','Staff')
 
 INSERT INTO 
-LogIn Values('AD620','My')
+LogIn Values('AD620','My','Staff')
 
 INSERT INTO Accountant
 VALUES (4444,'AWES312','Wally Elsayed',20,1,'2022-03-12','elsayedwa@students.rhu.edu.lb');
