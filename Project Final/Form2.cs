@@ -48,5 +48,15 @@ namespace Project_Final
         {
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(" Select Name from Accountant", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            textBox4.Text=reader.GetValue(0).ToString();
+        }
     }
 }

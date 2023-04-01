@@ -35,7 +35,14 @@ namespace Project_Final
             panel3.BackColor = Color.FromArgb(0, 0, 0, 0);
             pictureBox2.BackColor = Color.FromArgb(0, 0, 0, 0);
             checkBox1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            checkBox2.BackColor = Color.FromArgb(0, 0, 0, 0);
             txtpass.UseSystemPasswordChar = true;
+
+            if (Properties.Settings.Default.Username != string.Empty)
+            {
+                txtUname.Text = Properties.Settings.Default.Username;
+                txtpass.Text = Properties.Settings.Default.Password;
+            }
 
 
         }
@@ -169,8 +176,23 @@ namespace Project_Final
                 MessageBox.Show("Error occured...");
             }
             con.Close();
+
+            if (checkBox2.Checked == true)
+            {
+                Properties.Settings.Default.Username = txtUname.Text;
+                Properties.Settings.Default.Password=txtpass.Text;  
+                Properties.Settings.Default.Save();
+            }
+
+            else
+            {
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Password = "";
+                Properties.Settings.Default.Save();
+            }
         }
 
+        
 
         private void txtUname_TextChanged(object sender, EventArgs e)
         {
