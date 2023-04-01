@@ -144,6 +144,19 @@ namespace Project_Final
                         this.Hide();
                         objform4.Show();
                     }
+
+                    else if (dbt.Rows[0][0].ToString()== "ICMOA1231")
+                    {
+                        ICmanager objform5 = new ICmanager();
+                        this.Hide();
+                        objform5.Show();
+                    }
+
+                    else
+                    {
+
+                    }
+
                 }
                 else
                 {
