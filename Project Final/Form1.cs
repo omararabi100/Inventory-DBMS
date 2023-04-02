@@ -183,7 +183,7 @@ namespace Project_Final
             res = MessageBox.Show ("Do you want to exit","Exit",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                
+                this.Close();
             }
             else
             {

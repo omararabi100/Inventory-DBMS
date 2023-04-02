@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace Project_Final
 {
@@ -45,6 +46,23 @@ namespace Project_Final
         }
 
         private void accountant_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Select * from Accountant ", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                label8.Text = reader["Name"].ToString();
+                label9.Text = reader["Email"].ToString();
+                label11.Text = reader["Username"].ToString();
+            }
+            con.Close();
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
