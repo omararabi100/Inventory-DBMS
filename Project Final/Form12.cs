@@ -111,7 +111,79 @@ namespace Project_Final
                      cmd1.ExecuteNonQuery();
                         MessageBox.Show("Admin added successfully");
                 }
-                if(Con.State == ConnectionState.Open)
+                else if (positionComb.SelectedItem.ToString() == "Accountant")
+                {
+                    SqlCommand cmd1 = new SqlCommand("AddAccountant", Con);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+
+                    cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
+                    cmd1.Parameters.AddWithValue("@AID", int.Parse(txtID.Text));
+                    cmd1.Parameters.AddWithValue("@Name", txtName.Text);
+                    cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
+                    if (isSelected)
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", Gender);
+                    }
+                    else
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", null);
+                    }
+                    cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
+                    cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@LogInType", "Accountant");
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Accountant added successfully");
+                }
+                else if (positionComb.SelectedItem.ToString() == "Inventory Control Manager")
+                {
+                    SqlCommand cmd1 = new SqlCommand("AddIcm", Con);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+
+                    cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
+                    cmd1.Parameters.AddWithValue("@ICMID", int.Parse(txtID.Text));
+                    cmd1.Parameters.AddWithValue("@Name", txtName.Text);
+                    cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
+                    if (isSelected)
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", Gender);
+                    }
+                    else
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", null);
+                    }
+                    cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
+                    cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@LogInType", "InventoryControlManager");
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("InventoryControlManager added successfully");
+                }
+                else if (positionComb.SelectedItem.ToString() == "Warehourse Manager")
+                {
+                    SqlCommand cmd1 = new SqlCommand("AddWareHouseManager", Con);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+
+                    cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
+                    cmd1.Parameters.AddWithValue("@WMID", int.Parse(txtID.Text));
+                    cmd1.Parameters.AddWithValue("@Name", txtName.Text);
+                    cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
+                    if (isSelected)
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", Gender);
+                    }
+                    else
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", null);
+                    }
+                    cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
+                    cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@LogInType", "InventoryControlManager");
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("WarehourseManager added successfully");
+                }
+                if (Con.State == ConnectionState.Open)
                 Con.Close();
             }
             catch (Exception msj)
