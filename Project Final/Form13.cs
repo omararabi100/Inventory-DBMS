@@ -61,7 +61,7 @@ namespace Project_Final
             txtID.Text = "";
             txtColor.Text = "";
             txtICMID.Text = "";
-
+            txtQuantity.Text = "";
             txtPrice.Text = "";
             txtSize.Text = "";
             txtQuality.Text = "";
@@ -88,6 +88,7 @@ namespace Project_Final
                 cmd.Parameters.AddWithValue("@Price", int.Parse(txtPrice.Text));
                 cmd.Parameters.AddWithValue("@COLOR", txtColor.Text);
                 cmd.Parameters.AddWithValue("@Quality", txtQuality.Text);
+                cmd.Parameters.AddWithValue("@Quantity", int.Parse(txtQuantity.Text));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product added successfully");
 
@@ -111,6 +112,11 @@ namespace Project_Final
             insert_imagecs newForm = new insert_imagecs();
             newForm.Show();
             this.Hide();
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

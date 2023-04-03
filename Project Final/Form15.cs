@@ -7,17 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_Final
 {
     public partial class Form15 : Form
     {
+        SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
         public Form15()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void Form15_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
         {
 
         }
