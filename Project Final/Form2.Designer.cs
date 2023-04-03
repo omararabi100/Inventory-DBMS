@@ -479,7 +479,6 @@
             this.button13.Text = "Reports";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button10_Click);
             // 
             // button12
             // 
@@ -499,7 +498,6 @@
             this.button12.Text = "Orders";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -519,7 +517,6 @@
             this.button11.Text = "Products";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button10_Click);
             // 
             // button15
             // 

@@ -30,7 +30,8 @@ namespace Project_Final
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text);
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-                cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@Name", txtName.Text);
+               cmd.ExecuteNonQuery();
                 MessageBox.Show("Customer added successfully");
                 if (Con.State == ConnectionState.Open)
                     Con.Close();
@@ -45,6 +46,12 @@ namespace Project_Final
         {
             txtPhoneNumber.Text = "";
             txtAddress.Text = "";
+            txtName.Text = "";
+        }
+
+        private void Form14_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
