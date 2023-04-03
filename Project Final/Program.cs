@@ -16,7 +16,7 @@ namespace Project_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ICmanager());
+            Application.Run(new addProduct());
         }
     }
 }

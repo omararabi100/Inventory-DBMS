@@ -168,6 +168,12 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="insert imagecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert imagecs.Designer.cs">
+      <DependentUpon>insert imagecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoryStream.cs" />
     <Compile Include="Menuform.cs">
       <SubType>Form</SubType>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert imagecs.resx">
+      <DependentUpon>insert imagecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menuform.resx">
       <DependentUpon>Menuform.cs</DependentUpon>
