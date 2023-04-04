@@ -123,7 +123,7 @@ namespace Project_Final
                 if (dbt.Rows.Count > 0)
                 {
                
-                    if (dbt.Rows[0][0].ToString() == "AWES312")
+                    if (dbt.Rows[0][2].ToString() == "Accountant")
                     {
                         accountant objform2 = new accountant();
                         this.Hide();
@@ -131,21 +131,21 @@ namespace Project_Final
 
                     }
 
-                    else if (dbt.Rows[0][0].ToString()== "ADAB529")
+                    else if (dbt.Rows[0][2].ToString()== "Admin")
                     {
                         admin objform3 = new admin();
                         this.Hide();
                         objform3.Show();
                     }
 
-                    else if (dbt.Rows[0][0].ToString()== "WHMNEH723")
+                    else if (dbt.Rows[0][2].ToString()== "WareHouseManager")
                     {
                         warehousem objform4 = new warehousem(); 
                         this.Hide();
                         objform4.Show();
                     }
 
-                    else if (dbt.Rows[0][0].ToString()== "ICMOA1231")
+                    else if (dbt.Rows[0][0].ToString()== "InventoryControlManager")
                     {
                         ICmanager objform5 = new ICmanager();
                         this.Hide();
@@ -189,6 +189,11 @@ namespace Project_Final
             {
                 this.Show();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
