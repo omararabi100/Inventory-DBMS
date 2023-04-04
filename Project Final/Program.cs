@@ -16,7 +16,11 @@ namespace Project_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Form15());
+=======
+            Application.Run(new Form8());
+>>>>>>> 7367a5b0142dda3f63c45e802dc189f0b9b80bbd
         }
     }
 }
