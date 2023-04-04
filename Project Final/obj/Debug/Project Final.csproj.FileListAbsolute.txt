@@ -130,3 +130,4 @@ C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project Final
 C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.addProduct.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.addProduct.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
+C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Selected_Items.resources

@@ -81,35 +81,35 @@ namespace Project_Final
                 if(Con.State != ConnectionState.Open)
                 Con.Open();
 
-                    SqlCommand cmd = new SqlCommand("addLogin", Con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                SqlCommand cmd = new SqlCommand("addLogin", Con);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@UserName", txtUname.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
 
 
-                    if (positionComb.SelectedItem.ToString() == "Administrator")
-                    {
-                        SqlCommand cmd1 = new SqlCommand("AddAdmin", Con);
-                        cmd1.CommandType = CommandType.StoredProcedure;
+                if (positionComb.SelectedItem.ToString() == "Administrator")
+                {
+                    SqlCommand cmd1 = new SqlCommand("AddAdmin", Con);
+                    cmd1.CommandType = CommandType.StoredProcedure;
                         
-                        cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
+                    cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
                     cmd1.Parameters.AddWithValue("@ADID", int.Parse(txtID.Text));
                     cmd1.Parameters.AddWithValue("@Name", txtName.Text);
-                        cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
-                        if (isSelected)
-                        {
-                            cmd1.Parameters.AddWithValue("@GENDER", Gender);
-                        }
-                        else
-                        {
-                            cmd1.Parameters.AddWithValue("@GENDER", null);
-                        }
-                        cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
-                        cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
-                     cmd.Parameters.AddWithValue("@LogInType", "Admin");
-                        cmd.ExecuteNonQuery();
-                     cmd1.ExecuteNonQuery();
-                        MessageBox.Show("Admin added successfully");
+                    cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
+                    if (isSelected)
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", Gender);
+                    }
+                    else
+                    {
+                        cmd1.Parameters.AddWithValue("@GENDER", null);
+                    }
+                    cmd1.Parameters.AddWithValue("@YOE", txtDate.Value);
+                    cmd1.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@LogInType", "Admin");
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Admin added successfully");
                 }
                 else if (positionComb.SelectedItem.ToString() == "Accountant")
                 {

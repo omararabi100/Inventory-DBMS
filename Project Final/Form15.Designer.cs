@@ -33,18 +33,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtOID = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSpent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.AddProductBtn = new System.Windows.Forms.Button();
+            this.RemoveProductBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClear
@@ -100,14 +104,14 @@
             this.txtDiscount.Size = new System.Drawing.Size(179, 24);
             this.txtDiscount.TabIndex = 37;
             // 
-            // txtID
+            // txtOID
             // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(82, 27);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(160, 24);
-            this.txtID.TabIndex = 38;
+            this.txtOID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOID.Location = new System.Drawing.Point(82, 27);
+            this.txtOID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOID.Name = "txtOID";
+            this.txtOID.Size = new System.Drawing.Size(160, 24);
+            this.txtOID.TabIndex = 38;
             // 
             // btnAdd
             // 
@@ -152,14 +156,14 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "AID";
             // 
-            // textBox1
+            // txtAID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(82, 73);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 24);
-            this.textBox1.TabIndex = 44;
+            this.txtAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAID.Location = new System.Drawing.Point(82, 73);
+            this.txtAID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAID.Name = "txtAID";
+            this.txtAID.Size = new System.Drawing.Size(160, 24);
+            this.txtAID.TabIndex = 44;
             // 
             // label3
             // 
@@ -172,14 +176,14 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "SID";
             // 
-            // textBox2
+            // txtSID
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(82, 124);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 24);
-            this.textBox2.TabIndex = 46;
+            this.txtSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSID.Location = new System.Drawing.Point(82, 124);
+            this.txtSID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSID.Name = "txtSID";
+            this.txtSID.Size = new System.Drawing.Size(160, 24);
+            this.txtSID.TabIndex = 46;
             // 
             // label5
             // 
@@ -192,34 +196,66 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Phone Number";
             // 
-            // textBox3
+            // txtPhoneNumber
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(388, 124);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 24);
-            this.textBox3.TabIndex = 48;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(388, 124);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(153, 24);
+            this.txtPhoneNumber.TabIndex = 48;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(92, 262);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 183);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(321, 117);
+            this.dataGridView1.Size = new System.Drawing.Size(234, 117);
             this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(301, 183);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 117);
+            this.dataGridView2.TabIndex = 50;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // AddProductBtn
+            // 
+            this.AddProductBtn.Location = new System.Drawing.Point(92, 306);
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.Size = new System.Drawing.Size(83, 23);
+            this.AddProductBtn.TabIndex = 51;
+            this.AddProductBtn.Text = "Add Item";
+            this.AddProductBtn.UseVisualStyleBackColor = true;
+            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click);
+            // 
+            // RemoveProductBtn
+            // 
+            this.RemoveProductBtn.Location = new System.Drawing.Point(374, 306);
+            this.RemoveProductBtn.Name = "RemoveProductBtn";
+            this.RemoveProductBtn.Size = new System.Drawing.Size(83, 23);
+            this.RemoveProductBtn.TabIndex = 52;
+            this.RemoveProductBtn.Text = "Remove Item";
+            this.RemoveProductBtn.UseVisualStyleBackColor = true;
             // 
             // Form15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 390);
+            this.Controls.Add(this.RemoveProductBtn);
+            this.Controls.Add(this.AddProductBtn);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSID);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.button2);
@@ -228,13 +264,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSpent);
             this.Controls.Add(this.txtDiscount);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtOID);
             this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form15";
             this.Text = "Add order";
             this.Load += new System.EventHandler(this.Form15_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,16 +284,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDiscount;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtOID;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSpent;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAID;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button AddProductBtn;
+        private System.Windows.Forms.Button RemoveProductBtn;
     }
 }
