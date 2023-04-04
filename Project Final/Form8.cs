@@ -130,16 +130,12 @@ namespace Project_Final
 
                 dataGridView1.DataSource = dt;
 
-
             }
 
             catch
             {
                 MessageBox.Show("Error");
             }
-
-
-
 
 
         }
