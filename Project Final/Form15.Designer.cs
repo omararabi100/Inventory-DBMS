@@ -209,7 +209,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 230);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(234, 117);
             this.dataGridView1.TabIndex = 49;
@@ -218,7 +218,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(313, 230);
+            this.dataGridView2.Location = new System.Drawing.Point(322, 177);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 117);
             this.dataGridView2.TabIndex = 50;
@@ -226,7 +226,7 @@
             // 
             // AddProductBtn
             // 
-            this.AddProductBtn.Location = new System.Drawing.Point(82, 353);
+            this.AddProductBtn.Location = new System.Drawing.Point(82, 319);
             this.AddProductBtn.Name = "AddProductBtn";
             this.AddProductBtn.Size = new System.Drawing.Size(83, 23);
             this.AddProductBtn.TabIndex = 51;
@@ -236,7 +236,7 @@
             // 
             // RemoveProductBtn
             // 
-            this.RemoveProductBtn.Location = new System.Drawing.Point(388, 353);
+            this.RemoveProductBtn.Location = new System.Drawing.Point(388, 319);
             this.RemoveProductBtn.Name = "RemoveProductBtn";
             this.RemoveProductBtn.Size = new System.Drawing.Size(83, 23);
             this.RemoveProductBtn.TabIndex = 52;
