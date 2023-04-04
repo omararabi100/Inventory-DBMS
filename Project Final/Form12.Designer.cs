@@ -31,7 +31,6 @@
             this.Addbtn = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Discardbtn = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -84,17 +83,6 @@
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
-            // 
-            // Discardbtn
-            // 
-            this.Discardbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discardbtn.Location = new System.Drawing.Point(442, 248);
-            this.Discardbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.Discardbtn.Name = "Discardbtn";
-            this.Discardbtn.Size = new System.Drawing.Size(64, 26);
-            this.Discardbtn.TabIndex = 3;
-            this.Discardbtn.Text = "Discard";
-            this.Discardbtn.UseVisualStyleBackColor = true;
             // 
             // txtID
             // 
@@ -300,7 +288,6 @@
             this.Controls.Add(this.RBFemale);
             this.Controls.Add(this.RBMale);
             this.Controls.Add(this.clearbtn);
-            this.Controls.Add(this.Discardbtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
@@ -329,7 +316,6 @@
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Discardbtn;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;

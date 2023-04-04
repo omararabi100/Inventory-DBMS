@@ -62,5 +62,11 @@ namespace Project_Final
             this.Hide();
             form.Show();
         }
+
+        private void btn_addUsers_Click(object sender, EventArgs e)
+        {
+            Form12 form = new Form12();
+            form.ShowDialog();
+        }
     }
 }

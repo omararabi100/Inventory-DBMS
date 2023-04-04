@@ -121,7 +121,7 @@ namespace Project_Final
                 con.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("Select * from products where Name like '%" + textBox1.Text + "%'", con);
+                SqlCommand cmd = new SqlCommand("Select * from product where Name like '%" + textBox1.Text + "%'", con);
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataTable dt = new DataTable();
                 da.SelectCommand = cmd;
