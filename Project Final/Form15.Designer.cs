@@ -54,18 +54,19 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(13, 353);
+            this.btnClear.Location = new System.Drawing.Point(11, 415);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(64, 26);
             this.btnClear.TabIndex = 42;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(432, 353);
+            this.button2.Location = new System.Drawing.Point(407, 415);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(64, 26);
@@ -116,7 +117,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(500, 353);
+            this.btnAdd.Location = new System.Drawing.Point(484, 415);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 26);
@@ -208,7 +209,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 183);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(234, 117);
             this.dataGridView1.TabIndex = 49;
@@ -217,7 +218,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(301, 183);
+            this.dataGridView2.Location = new System.Drawing.Point(322, 177);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 117);
             this.dataGridView2.TabIndex = 50;
@@ -225,7 +226,7 @@
             // 
             // AddProductBtn
             // 
-            this.AddProductBtn.Location = new System.Drawing.Point(92, 306);
+            this.AddProductBtn.Location = new System.Drawing.Point(82, 319);
             this.AddProductBtn.Name = "AddProductBtn";
             this.AddProductBtn.Size = new System.Drawing.Size(83, 23);
             this.AddProductBtn.TabIndex = 51;
@@ -235,18 +236,19 @@
             // 
             // RemoveProductBtn
             // 
-            this.RemoveProductBtn.Location = new System.Drawing.Point(374, 306);
+            this.RemoveProductBtn.Location = new System.Drawing.Point(388, 319);
             this.RemoveProductBtn.Name = "RemoveProductBtn";
             this.RemoveProductBtn.Size = new System.Drawing.Size(83, 23);
             this.RemoveProductBtn.TabIndex = 52;
             this.RemoveProductBtn.Text = "Remove Item";
             this.RemoveProductBtn.UseVisualStyleBackColor = true;
+            this.RemoveProductBtn.Click += new System.EventHandler(this.RemoveProductBtn_Click);
             // 
             // Form15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 390);
+            this.ClientSize = new System.Drawing.Size(574, 448);
             this.Controls.Add(this.RemoveProductBtn);
             this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.dataGridView2);

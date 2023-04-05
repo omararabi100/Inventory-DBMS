@@ -15,7 +15,7 @@ namespace Project_Final
     {
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         DataTable dts = new DataTable();
-        DataTable dtp = new DataTable("IMGS");
+        DataTable dtp = new DataTable();
         public Form15()
         {
             InitializeComponent();
@@ -51,6 +51,7 @@ namespace Project_Final
                 cmd.Parameters.AddWithValue("@Discount", double.Parse(txtDiscount.Text));
                 cmd.Parameters.AddWithValue("@AmmountSpent", double.Parse(txtSpent.Text));
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("check");
 
                 SqlCommand cmd1 = new SqlCommand("AddSelectedItems", Con);
                 cmd1.CommandType = CommandType.StoredProcedure;
@@ -58,13 +59,13 @@ namespace Project_Final
                 {
                     if (dvr.Cells[0].Value != null)
                     {
-                        cmd1.Parameters.Clear();
                         cmd1.Parameters.AddWithValue("@OID", int.Parse(txtOID.Text));
                         cmd1.Parameters.AddWithValue("@PID", dvr.Cells[0].Value);
                         cmd1.ExecuteNonQuery();
+                     
                     }
+                       cmd1.Parameters.Clear();
                 }
-
                 if (Con.State == ConnectionState.Open)
                     Con.Close();
             }
@@ -89,14 +90,17 @@ namespace Project_Final
             {
                 if (Con.State != ConnectionState.Open)
                     Con.Open();
+
                 SqlDataAdapter adapter = new SqlDataAdapter("Select * from Product", Con);
+                dtp.Clear();
                 adapter.Fill(dtp);
                 dataGridView1.DataSource = dtp;
                 if (Con.State == ConnectionState.Open)
                     Con.Close();
             }
         }
-        
+
+
         private void AddProductBtn_Click(object sender, EventArgs e)
         {
             var SelectedProductsIndex = new List<int>();
@@ -116,6 +120,31 @@ namespace Project_Final
                 dtp.Rows.RemoveAt(SelectedProductsIndex[i-1]);
             }
             dataGridView1.DataSource = dtp;
+        }
+
+        private void dvSI_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void RemoveProductBtn_Click(object sender, EventArgs e)
+        {
+            LoadProductData();
+            dts.Clear();
+            dataGridView2.DataSource = null;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtAID.Text = "";
+            txtDiscount.Text = "";
+            txtOID.Text = "";
+            txtPhoneNumber.Text = "";
+            txtSID.Text = "";
+            txtSpent.Text = "";
+            dts.Clear();
+            dataGridView2.DataSource=dts;
+            LoadProductData();
         }
     }
 }

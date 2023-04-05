@@ -128,7 +128,6 @@ namespace Project_Final
                         accountant objform2 = new accountant();
                         this.Hide();
                         objform2.Show();
-
                     }
 
                     else if (dbt.Rows[0][2].ToString()== "Admin")
