@@ -13,7 +13,7 @@ namespace Project_Final
 {
     public partial class insert_imagecs : Form
     {
-        SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public insert_imagecs()
         {
             InitializeComponent();

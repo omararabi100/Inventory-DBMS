@@ -13,7 +13,7 @@ namespace Project_Final
 {
     public partial class Form15 : Form
     {
-        SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         DataTable dts = new DataTable();
         DataTable dtp = new DataTable();
         public Form15()

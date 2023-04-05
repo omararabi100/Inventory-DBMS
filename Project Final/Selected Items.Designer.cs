@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Selected_Items";
             this.Text = "Selected_Items";
+            this.Load += new System.EventHandler(this.Selected_Items_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

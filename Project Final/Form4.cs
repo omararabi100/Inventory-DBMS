@@ -41,5 +41,10 @@ namespace Project_Final
             this.Hide();
             form.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
