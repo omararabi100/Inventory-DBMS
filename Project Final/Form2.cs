@@ -14,7 +14,7 @@ namespace Project_Final
 {
     public partial class accountant : Form
     {
-        SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public accountant()
         {
             InitializeComponent();
@@ -73,6 +73,11 @@ namespace Project_Final
             this.Hide();
             form.Show();
           
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

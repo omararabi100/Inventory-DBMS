@@ -23,5 +23,10 @@ namespace Project_Final
             this.Hide();
             form.Show();
         }
+
+        private void Form9_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

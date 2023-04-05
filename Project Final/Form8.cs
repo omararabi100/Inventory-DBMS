@@ -23,5 +23,10 @@ namespace Project_Final
             this.Hide();
             form.Show();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
