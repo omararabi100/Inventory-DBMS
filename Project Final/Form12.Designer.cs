@@ -49,12 +49,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Addbtn
             // 
             this.Addbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbtn.Location = new System.Drawing.Point(512, 248);
+            this.Addbtn.Location = new System.Drawing.Point(513, 332);
             this.Addbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(69, 26);
@@ -193,7 +195,7 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(9, 248);
+            this.clearbtn.Location = new System.Drawing.Point(8, 332);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(64, 26);
@@ -275,11 +277,20 @@
             this.txtDate.Size = new System.Drawing.Size(200, 20);
             this.txtDate.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(51, 202);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 103);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 284);
+            this.ClientSize = new System.Drawing.Size(590, 369);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label9);
@@ -306,6 +317,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add user";
             this.Load += new System.EventHandler(this.Form12_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +346,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

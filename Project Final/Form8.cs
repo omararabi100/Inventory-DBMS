@@ -136,7 +136,8 @@ namespace Project_Final
             {
                 MessageBox.Show("Error");
             }
-
+            if (con.State == ConnectionState.Open)
+                con.Close();
 
         }
 

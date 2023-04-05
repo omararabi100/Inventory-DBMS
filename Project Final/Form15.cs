@@ -51,7 +51,6 @@ namespace Project_Final
                 cmd.Parameters.AddWithValue("@Discount", double.Parse(txtDiscount.Text));
                 cmd.Parameters.AddWithValue("@AmmountSpent", double.Parse(txtSpent.Text));
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("check");
 
                 SqlCommand cmd1 = new SqlCommand("AddSelectedItems", Con);
                 cmd1.CommandType = CommandType.StoredProcedure;
@@ -145,6 +144,16 @@ namespace Project_Final
             dts.Clear();
             dataGridView2.DataSource=dts;
             LoadProductData();
+        }
+
+        private void txtSpent_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
