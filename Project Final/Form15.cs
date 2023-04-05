@@ -65,6 +65,7 @@ namespace Project_Final
                     }
                        cmd1.Parameters.Clear();
                 }
+                MessageBox.Show("Order Added Successfully!!!");
                 if (Con.State == ConnectionState.Open)
                     Con.Close();
             }

@@ -137,7 +137,10 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form8 form = new Form8();
             this.Close();
+            form.Show();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

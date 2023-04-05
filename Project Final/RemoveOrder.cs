@@ -14,7 +14,7 @@ namespace Project_Final
     public partial class RemoveOrder : Form
     {
         DataTable dt = new DataTable();
-        SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public RemoveOrder()
         {
             InitializeComponent();
@@ -100,6 +100,11 @@ namespace Project_Final
             }
             if (con.State == ConnectionState.Open)
                 con.Close();
+        }
+
+        private void RemoveOrder_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

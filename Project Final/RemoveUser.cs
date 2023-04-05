@@ -14,7 +14,7 @@ namespace Project_Final
     public partial class RemoveUser : Form
     {
         DataTable dt = new DataTable();
-        SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public RemoveUser()
         {
             InitializeComponent();
@@ -46,10 +46,11 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from Admin", con);
-            dt.Clear();
-            adapter.Fill(dt);
-            dvgUsers.DataSource = dt;
+            SqlCommand cmd2 = new SqlCommand("ShowAdmin", con);
+            DataTable dt2 = new DataTable();
+            dt2.Clear();
+            dt2.Load(cmd2.ExecuteReader());
+            dvgUsers.DataSource = dt2;
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
@@ -71,10 +72,11 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from InventoryControlManager", con);
-            dt.Clear();
-            adapter.Fill(dt);
-            dvgUsers.DataSource = dt;
+            SqlCommand cmd4 = new SqlCommand("ShowICM", con);
+            DataTable dt4 = new DataTable();
+            dt4.Clear();
+            dt4.Load(cmd4.ExecuteReader());
+            dvgUsers.DataSource = dt4;
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
@@ -83,10 +85,11 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from WareHouseManager", con);
-            dt.Clear();
-            adapter.Fill(dt);
-            dvgUsers.DataSource = dt;
+            SqlCommand cmd5 = new SqlCommand("ShowWM", con);
+            DataTable dt5 = new DataTable();
+            dt5.Clear();
+            dt5.Load(cmd5.ExecuteReader());
+            dvgUsers.DataSource = dt5;
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
@@ -95,10 +98,11 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from Staff", con);
-            dt.Clear();
-            adapter.Fill(dt);
-            dvgUsers.DataSource = dt;
+            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
+            DataTable dt6 = new DataTable();
+            dt6.Clear();
+            dt6.Load(cmd6.ExecuteReader());
+            dvgUsers.DataSource = dt6;
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
@@ -107,6 +111,11 @@ namespace Project_Final
         {
             dt.Clear();
             dvgUsers.DataSource = null;
+        }
+
+        private void RemoveUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

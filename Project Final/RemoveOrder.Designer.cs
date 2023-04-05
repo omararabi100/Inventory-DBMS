@@ -93,6 +93,7 @@
             this.Controls.Add(this.dvgOrder);
             this.Name = "RemoveOrder";
             this.Text = "RemoveOrder";
+            this.Load += new System.EventHandler(this.RemoveOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

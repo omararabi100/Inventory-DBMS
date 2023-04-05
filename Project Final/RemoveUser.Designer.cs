@@ -108,6 +108,7 @@
             this.Controls.Add(this.dvgUsers);
             this.Name = "RemoveUser";
             this.Text = "RemoveUser";
+            this.Load += new System.EventHandler(this.RemoveUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

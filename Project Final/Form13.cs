@@ -89,6 +89,7 @@ namespace Project_Final
                 cmd.Parameters.AddWithValue("@COLOR", txtColor.Text);
                 cmd.Parameters.AddWithValue("@Quality", txtQuality.Text);
                 cmd.Parameters.AddWithValue("@Quantity", int.Parse(txtQuantity.Text));
+                cmd.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product added successfully");
 
@@ -115,6 +116,11 @@ namespace Project_Final
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
         {
 
         }
