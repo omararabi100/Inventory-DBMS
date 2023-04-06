@@ -220,7 +220,7 @@ namespace Project_Final
                             cmd.Parameters.AddWithValue("@UserName", dvr.Cells[4].Value.ToString());
                             cmd.Parameters.AddWithValue("@Name", dvr.Cells[5].Value.ToString());
                             cmd.Parameters.AddWithValue("@Phone", Int64.Parse(dvr.Cells[6].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@DailySchedule", dvr.Cells[7].Value);
+                            cmd.Parameters.AddWithValue("@DailySchedule", dvr.Cells[7].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
