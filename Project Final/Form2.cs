@@ -14,10 +14,13 @@ namespace Project_Final
 {
     public partial class accountant : Form
     {
+        
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        public accountant()
+        public accountant(string str_value)
         {
             InitializeComponent();
+            label11.Text = str_value;
+           
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,13 +53,14 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from Accountant ", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            SqlCommand cmd = new SqlCommand("Select * from Accountant where UserName = '"+label11.Text.Trim()+ "'", con);
+            SqlDataAdapter adapter= new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count>0)
             {
-                label8.Text = reader["Name"].ToString();
-                label9.Text = reader["Email"].ToString();
-                label11.Text = reader["Username"].ToString();
+                label8.Text = dt.Rows[0][3].ToString();
+                label9.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
 

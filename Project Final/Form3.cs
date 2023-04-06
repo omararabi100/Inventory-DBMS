@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,10 @@ namespace Project_Final
 {
     public partial class admin : Form
     {
-        public admin()
+        public admin(String Username)
         {
             InitializeComponent();
+            label12.Text = Username;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -23,13 +25,14 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from Admin ", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            SqlCommand cmd = new SqlCommand("Select * from Admin where UserName = '" + label12.Text.Trim() + "'", con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                label2.Text = reader["Name"].ToString();
-                label4.Text = reader["Email"].ToString();
-                label12.Text = reader["Username"].ToString();
+                label2.Text = dt.Rows[0][3].ToString();
+                label4.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
         }
@@ -41,7 +44,7 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            admin frm = new admin();
+            admin frm = new admin(label12.Text);
             frm.Show();
             this.Hide();
         }
@@ -73,6 +76,11 @@ namespace Project_Final
         {
             ModifyUser form = new ModifyUser();
             form.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
