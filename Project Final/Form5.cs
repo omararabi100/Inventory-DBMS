@@ -14,23 +14,24 @@ namespace Project_Final
 {
     public partial class ICmanager : Form
     {
-        public ICmanager()
+        public ICmanager(String Username)
         {
             InitializeComponent();
+            label5.Text= Username;
         }
 
         private void ICmanager_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
-
-            SqlCommand cmd = new SqlCommand("Select * from InventoryControlManager ", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            SqlCommand cmd = new SqlCommand("Select * from InventoryControlManager where UserName = '" + label5.Text.Trim() + "'", con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                label2.Text = reader["Name"].ToString();
-                label4.Text = reader["Email"].ToString();
-                label5.Text = reader["Username"].ToString();
+                label2.Text = dt.Rows[0][3].ToString();
+                label4.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
         }

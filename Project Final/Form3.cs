@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,77 +14,10 @@ namespace Project_Final
 {
     public partial class admin : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-
-        public admin()
+        public admin(String Username)
         {
             InitializeComponent();
-        }
-
-        public void LoadAdminData()
-        {
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            dvgUsers.DataSource = null;
-            SqlCommand cmd2 = new SqlCommand("ShowAdmin", con);
-            DataTable dt2 = new DataTable();
-            dt2.Clear();
-            dt2.Load(cmd2.ExecuteReader());
-            dvgUsers.DataSource = dt2;
-            if (con.State == ConnectionState.Open)
-                con.Close();
-        }
-        public void LoadAccountantData()
-        {
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            dvgUsers.DataSource = null;
-            SqlCommand cmd3 = new SqlCommand("ShowAccountant", con);
-            DataTable dt1 = new DataTable();
-            dt1.Clear();
-            dt1.Load(cmd3.ExecuteReader());
-            dvgUsers.DataSource = dt1;
-            if (con.State == ConnectionState.Open)
-                con.Close();
-        }
-        public void LoadInventoryControlManagerData()
-        {
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            dvgUsers.DataSource = null;
-            SqlCommand cmd4 = new SqlCommand("ShowICM", con);
-            DataTable dt4 = new DataTable();
-            dt4.Clear();
-            dt4.Load(cmd4.ExecuteReader());
-            dvgUsers.DataSource = dt4;
-            if (con.State == ConnectionState.Open)
-                con.Close();
-        }
-        public void LoadWareHouseManagerData()
-        {
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            dvgUsers.DataSource = null;
-            SqlCommand cmd5 = new SqlCommand("ShowWM", con);
-            DataTable dt5 = new DataTable();
-            dt5.Clear();
-            dt5.Load(cmd5.ExecuteReader());
-            dvgUsers.DataSource = dt5;
-            if (con.State == ConnectionState.Open)
-                con.Close();
-        }
-        public void LoadStaffData()
-        {
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            dvgUsers.DataSource = null;
-            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
-            DataTable dt6 = new DataTable();
-            dt6.Clear();
-            dt6.Load(cmd6.ExecuteReader());
-            dvgUsers.DataSource = dt6;
-            if (con.State == ConnectionState.Open)
-                con.Close();
+            label12.Text = Username;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -91,13 +25,14 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from Admin ", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            SqlCommand cmd = new SqlCommand("Select * from Admin where UserName = '" + label12.Text.Trim() + "'", con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                label2.Text = reader["Name"].ToString();
-                label4.Text = reader["Email"].ToString();
-                label12.Text = reader["Username"].ToString();
+                label2.Text = dt.Rows[0][3].ToString();
+                label4.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
         }
@@ -109,7 +44,7 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            admin frm = new admin();
+            admin frm = new admin(label12.Text);
             frm.Show();
             this.Hide();
         }
@@ -143,26 +78,9 @@ namespace Project_Final
             form.ShowDialog();
         }
 
-        private void PositionComb_SelectedIndexChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (PositionComb.SelectedItem.ToString() == "Administrator")
-                    LoadAdminData();
-                else if (PositionComb.SelectedItem.ToString() == "Accountant")
-                    LoadAccountantData();
-                else if (PositionComb.SelectedItem.ToString() == "Warehouse Manager")
-                    LoadWareHouseManagerData();
-                else if (PositionComb.SelectedItem.ToString() == "Inventory Control Manager")
-                    LoadInventoryControlManagerData();
-                else if (PositionComb.SelectedItem.ToString() == "Staff Member")
-                    LoadStaffData();
-            }
-            catch (Exception msj)
-            {
-                MessageBox.Show("Error");
-            }
-        }
 
+        }
     }
 }
