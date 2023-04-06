@@ -164,4 +164,4 @@ C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project Final.exe
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project Final.pdb
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.RemoveOrder.resources
-C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.RemoveUser.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.ModifyUser.resources

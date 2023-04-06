@@ -56,8 +56,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btn_RemoveUser = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.btnModifyUsers = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_addUsers = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,8 +66,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -80,11 +80,11 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -458,10 +458,10 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.btn_RemoveUser);
+            this.panel3.Controls.Add(this.btnAddStaff);
+            this.panel3.Controls.Add(this.pictureBox11);
+            this.panel3.Controls.Add(this.btnModifyUsers);
             this.panel3.Controls.Add(this.pictureBox10);
             this.panel3.Controls.Add(this.btn_addUsers);
             this.panel3.Location = new System.Drawing.Point(148, 419);
@@ -470,38 +470,39 @@
             this.panel3.Size = new System.Drawing.Size(933, 190);
             this.panel3.TabIndex = 2;
             // 
-            // pictureBox8
+            // pictureBox11
             // 
-            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(504, 49);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(784, 49);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 17;
+            this.pictureBox11.TabStop = false;
             // 
-            // btn_RemoveUser
+            // btnModifyUsers
             // 
-            this.btn_RemoveUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_RemoveUser.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_RemoveUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_RemoveUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RemoveUser.FlatAppearance.BorderSize = 0;
-            this.btn_RemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RemoveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_RemoveUser.Location = new System.Drawing.Point(384, 49);
-            this.btn_RemoveUser.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_RemoveUser.Name = "btn_RemoveUser";
-            this.btn_RemoveUser.Size = new System.Drawing.Size(170, 60);
-            this.btn_RemoveUser.TabIndex = 14;
-            this.btn_RemoveUser.Text = "Remove Users";
-            this.btn_RemoveUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RemoveUser.UseVisualStyleBackColor = false;
+            this.btnModifyUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModifyUsers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnModifyUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnModifyUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModifyUsers.FlatAppearance.BorderSize = 0;
+            this.btnModifyUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifyUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModifyUsers.Location = new System.Drawing.Point(664, 49);
+            this.btnModifyUsers.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModifyUsers.Name = "btnModifyUsers";
+            this.btnModifyUsers.Size = new System.Drawing.Size(170, 60);
+            this.btnModifyUsers.TabIndex = 16;
+            this.btnModifyUsers.Text = "Modify Users";
+            this.btnModifyUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModifyUsers.UseVisualStyleBackColor = false;
+            this.btnModifyUsers.Click += new System.EventHandler(this.btnModifyUsers_Click);
             // 
             // pictureBox10
             // 
@@ -613,38 +614,38 @@
             this.pictureBox22.TabIndex = 4;
             this.pictureBox22.TabStop = false;
             // 
-            // pictureBox11
+            // btnAddStaff
             // 
-            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(784, 49);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 17;
-            this.pictureBox11.TabStop = false;
+            this.btnAddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddStaff.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddStaff.FlatAppearance.BorderSize = 0;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStaff.Location = new System.Drawing.Point(385, 49);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(170, 60);
+            this.btnAddStaff.TabIndex = 18;
+            this.btnAddStaff.Text = "Add Staff";
+            this.btnAddStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStaff.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // pictureBox8
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(664, 49);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(170, 60);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "Modify Images";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(505, 49);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 19;
+            this.pictureBox8.TabStop = false;
             // 
             // admin
             // 
@@ -677,11 +678,11 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,9 +725,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btn_RemoveUser;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnModifyUsers;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btnAddStaff;
     }
 }

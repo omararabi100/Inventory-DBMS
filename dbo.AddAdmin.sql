@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE AddAdmin
+	@ADID int,
+	@UserName NVARCHAR(25),
+	@Name NVARCHAR(30),
+	@Age INT,
+	@GENDER BIT,
+	@YOE DATE,
+	@EMAIL NVARCHAR(100)
+
+AS
+INSERT INTO Admin VALUES (1,@ADID,@UserName,@Name,@Age,@GENDER,@YOE,@EMAIL)

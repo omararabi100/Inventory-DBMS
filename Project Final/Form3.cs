@@ -68,5 +68,11 @@ namespace Project_Final
             Form12 form = new Form12();
             form.ShowDialog();
         }
+
+        private void btnModifyUsers_Click(object sender, EventArgs e)
+        {
+            ModifyUser form = new ModifyUser();
+            form.ShowDialog();
+        }
     }
 }

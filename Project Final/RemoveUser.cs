@@ -11,13 +11,15 @@ using System.Windows.Forms;
 
 namespace Project_Final
 {
-    public partial class RemoveUser : Form
+    public partial class ModifyUser : Form
     {
         DataTable dt = new DataTable();
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        public RemoveUser()
+        public ModifyUser()
         {
+
             InitializeComponent();
+            
         }
 
         private void PositionComb_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,15 +109,203 @@ namespace Project_Final
                 con.Close();
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            dt.Clear();
-            dvgUsers.DataSource = null;
+            try
+            {
+                SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                if (PositionComb.SelectedItem.ToString() == "Administrator")
+                {
+                    SqlCommand cmd = new SqlCommand("ModifyAdmin", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    foreach (DataGridViewRow dvr in dvgUsers.Rows)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@ADID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    LoadAdminData();
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Accountant")
+                {
+                    SqlCommand cmd = new SqlCommand("ModifyAccountant", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    foreach (DataGridViewRow dvr in dvgUsers.Rows)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@AID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    LoadAccountantData();
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Warehouse Manager")
+                {
+                    SqlCommand cmd = new SqlCommand("ModifyWM", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    foreach (DataGridViewRow dvr in dvgUsers.Rows)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@WMID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    LoadWareHouseManagerData();
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Inventory Control Manager")
+                {
+                    SqlCommand cmd = new SqlCommand("ModifyICM", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    foreach (DataGridViewRow dvr in dvgUsers.Rows)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@ICMID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    LoadInventoryControlManagerData();
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Staff Member")
+                {
+                    SqlCommand cmd = new SqlCommand("ModifyStaff", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    foreach (DataGridViewRow dvr in dvgUsers.Rows)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@SID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@ADID", int.Parse(dvr.Cells[2].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@WMID", int.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[4].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[5].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Phone", Int64.Parse(dvr.Cells[6].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@DailySchedule", dvr.Cells[7].Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    LoadStaffData();
+                }
+                
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+            catch (Exception msj)
+            {
+                MessageBox.Show(msj.ToString());
+            }
         }
 
         private void RemoveUser_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                if (PositionComb.SelectedItem.ToString() == "Administrator")
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from Admin where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    dvgUsers.DataSource = dt;
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Accountant")
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from Accountant where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    dvgUsers.DataSource = dt;
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Warehouse Manager")
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    dvgUsers.DataSource = dt;
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Inventory Control Manager")
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from InventoryControlManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    dvgUsers.DataSource = dt;
+                }
+                else if (PositionComb.SelectedItem.ToString() == "Staff Member")
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from Staff where Name like '%" + txtSearch.Text + "%'", con);
+                    //SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    //da.SelectCommand = cmd;
+                    //dt.Clear();
+                    //da.Fill(dt);
+                    dt.Load(cmd.ExecuteReader());
+                    dvgUsers.DataSource = dt;
+                }
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+            catch (Exception msj)
+            {
+                MessageBox.Show(msj.ToString());
+            }
         }
     }
 }

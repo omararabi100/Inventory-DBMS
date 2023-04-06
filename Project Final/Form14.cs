@@ -28,7 +28,7 @@ namespace Project_Final
 
                 SqlCommand cmd = new SqlCommand("addCustomer", Con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", Int64.Parse(txtPhoneNumber.Text));
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
                cmd.ExecuteNonQuery();

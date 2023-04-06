@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE addWareHouseManager
+	@WMID int,
+	@UserName NVARCHAR(25),
+	@Name NVARCHAR(30),
+	@Age INT,
+	@GENDER BIT,
+	@YOE DATE,
+	@EMAIL NVARCHAR(100)
+
+AS
+INSERT INTO WareHouseManager VALUES (1,@WMID,@UserName,@Name,@Age,@GENDER,@YOE,@EMAIL)

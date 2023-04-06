@@ -156,5 +156,16 @@ namespace Project_Final
         {
 
         }
+
+        private void btmExit_Click(object sender, EventArgs e)
+        {
+            Form9 form = new Form9();
+            this.Close();
+
+            form.LoadOrderData();
+            form.Show();
+
+
+        }
     }
 }

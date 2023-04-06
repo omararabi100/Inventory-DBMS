@@ -1,6 +1,6 @@
 ﻿namespace Project_Final
 {
-    partial class RemoveUser
+    partial class ModifyUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dvgUsers = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PositionComb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,15 +42,16 @@
             this.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgUsers.Location = new System.Drawing.Point(188, 51);
             this.dvgUsers.Name = "dvgUsers";
-            this.dvgUsers.Size = new System.Drawing.Size(560, 294);
+            this.dvgUsers.Size = new System.Drawing.Size(732, 294);
             this.dvgUsers.TabIndex = 0;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtSearch.Location = new System.Drawing.Point(12, 113);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(121, 20);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
@@ -85,28 +86,28 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Select Position:";
             // 
-            // btnRemove
+            // btnUpdate
             // 
-            this.btnRemove.Location = new System.Drawing.Point(672, 400);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 5;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnUpdate.Location = new System.Drawing.Point(845, 415);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // RemoveUser
+            // ModifyUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRemove);
+            this.ClientSize = new System.Drawing.Size(932, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PositionComb);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dvgUsers);
-            this.Name = "RemoveUser";
+            this.Name = "ModifyUser";
             this.Text = "RemoveUser";
             this.Load += new System.EventHandler(this.RemoveUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).EndInit();
@@ -118,10 +119,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dvgUsers;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox PositionComb;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
