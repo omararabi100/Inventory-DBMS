@@ -484,7 +484,7 @@
             this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(847, 130);
+            this.pictureBox15.Location = new System.Drawing.Point(848, 105);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(40, 56);
@@ -502,7 +502,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button13.Location = new System.Drawing.Point(716, 130);
+            this.button13.Location = new System.Drawing.Point(717, 105);
             this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(172, 58);
@@ -516,7 +516,7 @@
             this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(512, 130);
+            this.pictureBox14.Location = new System.Drawing.Point(513, 105);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(46, 57);
@@ -543,7 +543,7 @@
             this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(170, 130);
+            this.pictureBox13.Location = new System.Drawing.Point(171, 105);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(49, 58);
@@ -587,7 +587,7 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(376, 128);
+            this.button15.Location = new System.Drawing.Point(377, 103);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(183, 58);
@@ -663,7 +663,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button14.Location = new System.Drawing.Point(50, 128);
+            this.button14.Location = new System.Drawing.Point(51, 103);
             this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(170, 59);

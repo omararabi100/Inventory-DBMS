@@ -49,6 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Addbtn
@@ -193,7 +194,7 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(8, 209);
+            this.clearbtn.Location = new System.Drawing.Point(429, 209);
             this.clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(64, 26);
@@ -275,11 +276,23 @@
             this.txtDate.Size = new System.Drawing.Size(200, 20);
             this.txtDate.TabIndex = 11;
             // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(13, 213);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(69, 26);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // Form12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 250);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label9);
@@ -334,5 +347,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.Button btnExit;
     }
 }

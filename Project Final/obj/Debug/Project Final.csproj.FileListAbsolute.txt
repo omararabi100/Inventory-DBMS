@@ -154,7 +154,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Staff.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Users.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form8.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form9.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Menuform.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
@@ -167,3 +166,5 @@ C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.ModifyUser.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.RemoveOrder.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ModifyUser.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.OrdersForm.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources

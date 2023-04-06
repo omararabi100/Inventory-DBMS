@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStaffMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffMembers.Designer.cs">
+      <DependentUpon>AddStaffMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +208,9 @@
     <Compile Include="Selected Items.Designer.cs">
       <DependentUpon>Selected Items.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStaffMembers.resx">
+      <DependentUpon>AddStaffMembers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
