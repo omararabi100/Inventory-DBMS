@@ -1,6 +1,6 @@
 ﻿namespace Project_Final
 {
-    partial class Form9
+    partial class OrdersForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -377,7 +377,7 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Search By OID:";
             // 
-            // Form9
+            // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -389,8 +389,8 @@
             this.Controls.Add(this.dvgOrder);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form9";
-            this.Text = "Form9";
+            this.Name = "OrdersForm";
+            this.Text = "Orders";
             this.Load += new System.EventHandler(this.Form9_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

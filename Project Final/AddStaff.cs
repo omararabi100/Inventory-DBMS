@@ -32,7 +32,7 @@ namespace Project_Final
 
             if (positionComb.SelectedItem.ToString() == "Administrator")
             {
-                SqlCommand cmd1 = new SqlCommand("AddAdmin", Con);
+                SqlCommand cmd1 = new SqlCommand("AddAdmin", con);
                 cmd1.CommandType = CommandType.StoredProcedure;
 
                 cmd1.Parameters.AddWithValue("@UserName", txtUname.Text);
@@ -41,4 +41,9 @@ namespace Project_Final
                 cmd1.Parameters.AddWithValue("@Age", int.Parse(txtAge.Text));
             }
     }
-}
+
+        private void AddStaff_Load(object sender, EventArgs e)
+        {
+
+        }
+    }

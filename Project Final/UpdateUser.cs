@@ -307,5 +307,10 @@ namespace Project_Final
                 MessageBox.Show(msj.ToString());
             }
         }
+
+        private void dvgUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

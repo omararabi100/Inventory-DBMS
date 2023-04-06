@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Project_Final
 {
-    public partial class Form9 : Form
+    public partial class OrdersForm : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         DataTable dt = new DataTable();
@@ -28,7 +28,7 @@ namespace Project_Final
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
-        public Form9()
+        public OrdersForm()
         {
             InitializeComponent();
         }

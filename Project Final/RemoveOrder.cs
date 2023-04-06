@@ -109,7 +109,7 @@ namespace Project_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Form9 form = new Form9();
+            OrdersForm form = new OrdersForm();
             this.Close();
             form.LoadOrderData();
             form.Show();

@@ -8,6 +8,6 @@ namespace Project_Final
 {
     public class globals
     {
-        public static Form9 x;
+        public static OrdersForm x;
     }
 }

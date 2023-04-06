@@ -196,11 +196,11 @@
     <Compile Include="RemoveOrder.Designer.cs">
       <DependentUpon>RemoveOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveUser.cs">
+    <Compile Include="UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveUser.Designer.cs">
-      <DependentUpon>RemoveUser.cs</DependentUpon>
+    <Compile Include="UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Selected Items.cs">
       <SubType>Form</SubType>
@@ -275,8 +275,8 @@
     <EmbeddedResource Include="RemoveOrder.resx">
       <DependentUpon>RemoveOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveUser.resx">
-      <DependentUpon>RemoveUser.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selected Items.resx">
       <DependentUpon>Selected Items.cs</DependentUpon>
