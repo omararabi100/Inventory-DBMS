@@ -47,9 +47,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUname = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -359,9 +359,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblUname);
+            this.panel2.Controls.Add(this.lblEmail);
+            this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.pictureBox16);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label1);
@@ -373,36 +373,33 @@
             this.panel2.Size = new System.Drawing.Size(1244, 192);
             this.panel2.TabIndex = 1;
             // 
-            // label8
+            // lblUname
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(967, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 29);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "label2";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblUname.AutoSize = true;
+            this.lblUname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUname.Location = new System.Drawing.Point(967, 9);
+            this.lblUname.Name = "lblUname";
+            this.lblUname.Size = new System.Drawing.Size(0, 29);
+            this.lblUname.TabIndex = 20;
+            this.lblUname.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label6
+            // lblEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(339, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 29);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "label2";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(339, 59);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(0, 29);
+            this.lblEmail.TabIndex = 20;
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(341, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 29);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "label2";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(341, 9);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 29);
+            this.lblName.TabIndex = 20;
             // 
             // pictureBox16
             // 
@@ -454,6 +451,7 @@
             this.button16.TabIndex = 15;
             this.button16.Text = "Insert image";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // pictureBox17
             // 
@@ -718,24 +716,25 @@
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btnAddStaff
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(67, 7);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(227, 74);
-            this.button10.TabIndex = 24;
-            this.button10.Text = "Users";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddStaff.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddStaff.FlatAppearance.BorderSize = 0;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStaff.Location = new System.Drawing.Point(67, 7);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(227, 74);
+            this.btnAddStaff.TabIndex = 24;
+            this.btnAddStaff.Text = "Add Staff";
+            this.btnAddStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // panel4
             // 
@@ -747,7 +746,7 @@
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.pictureBox12);
             this.panel4.Controls.Add(this.button15);
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.btnAddStaff);
             this.panel4.Controls.Add(this.button11);
             this.panel4.Controls.Add(this.button12);
             this.panel4.Controls.Add(this.button14);
@@ -768,6 +767,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "warehousem";
+            this.Text = "WareHouseManager";
             this.Load += new System.EventHandler(this.warehousem_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -839,10 +839,10 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUname;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblName;
     }
 }

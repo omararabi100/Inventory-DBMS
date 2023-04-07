@@ -48,7 +48,7 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlCommand cmd2 = new SqlCommand("ShowAdmin", con);
+            SqlCommand cmd2 = new SqlCommand("ShowEditAdmin", con);
             DataTable dt2 = new DataTable();
             dt2.Clear();
             dt2.Load(cmd2.ExecuteReader());
@@ -61,7 +61,7 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlCommand cmd3 = new SqlCommand("ShowAccountant", con);
+            SqlCommand cmd3 = new SqlCommand("ShowEditAccountant", con);
             DataTable dt1 = new DataTable();
             dt1.Clear();
             dt1.Load(cmd3.ExecuteReader());
@@ -74,7 +74,7 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlCommand cmd4 = new SqlCommand("ShowICM", con);
+            SqlCommand cmd4 = new SqlCommand("ShowEditICM", con);
             DataTable dt4 = new DataTable();
             dt4.Clear();
             dt4.Load(cmd4.ExecuteReader());
@@ -87,7 +87,7 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlCommand cmd5 = new SqlCommand("ShowWM", con);
+            SqlCommand cmd5 = new SqlCommand("ShowEditWareHouseManager", con);
             DataTable dt5 = new DataTable();
             dt5.Clear();
             dt5.Load(cmd5.ExecuteReader());
@@ -100,7 +100,7 @@ namespace Project_Final
             if (con.State != ConnectionState.Open)
                 con.Open();
             dvgUsers.DataSource = null;
-            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
+            SqlCommand cmd6 = new SqlCommand("ShowEditStaff", con);
             DataTable dt6 = new DataTable();
             dt6.Clear();
             dt6.Load(cmd6.ExecuteReader());
@@ -127,12 +127,11 @@ namespace Project_Final
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
                             cmd.Parameters.AddWithValue("@ADID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
-                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
-                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[4].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[6].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -149,12 +148,11 @@ namespace Project_Final
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
                             cmd.Parameters.AddWithValue("@AID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
-                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
-                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[4].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[6].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -162,7 +160,7 @@ namespace Project_Final
                 }
                 else if (PositionComb.SelectedItem.ToString() == "Warehouse Manager")
                 {
-                    SqlCommand cmd = new SqlCommand("ModifyWM", con);
+                    SqlCommand cmd = new SqlCommand("ModifyWareHouseManager", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     foreach (DataGridViewRow dvr in dvgUsers.Rows)
                     {
@@ -171,12 +169,11 @@ namespace Project_Final
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
                             cmd.Parameters.AddWithValue("@WMID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
-                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
-                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[4].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[6].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -193,12 +190,11 @@ namespace Project_Final
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
                             cmd.Parameters.AddWithValue("@ICMID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[2].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[3].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[4].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[5].Value);
-                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[6].Value);
-                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Age", int.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Gender", dvr.Cells[4].Value);
+                            cmd.Parameters.AddWithValue("@YOE", dvr.Cells[5].Value);
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[6].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -215,12 +211,10 @@ namespace Project_Final
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@ActivityStatus", dvr.Cells[0].Value);
                             cmd.Parameters.AddWithValue("@SID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@ADID", int.Parse(dvr.Cells[2].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@WMID", int.Parse(dvr.Cells[3].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@UserName", dvr.Cells[4].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[5].Value.ToString());
-                            cmd.Parameters.AddWithValue("@Phone", Int64.Parse(dvr.Cells[6].Value.ToString()));
-                            cmd.Parameters.AddWithValue("@DailySchedule", dvr.Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Name", dvr.Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Phone", Int64.Parse(dvr.Cells[3].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@Email", dvr.Cells[4].Value.ToString());
+                            cmd.Parameters.AddWithValue("@DailySchedule", dvr.Cells[5].Value.ToString());
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -291,11 +285,7 @@ namespace Project_Final
                 else if (PositionComb.SelectedItem.ToString() == "Staff Member")
                 {
                     SqlCommand cmd = new SqlCommand("Select * from Staff where Name like '%" + txtSearch.Text + "%'", con);
-                    //SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
-                    //da.SelectCommand = cmd;
-                    //dt.Clear();
-                    //da.Fill(dt);
                     dt.Load(cmd.ExecuteReader());
                     dvgUsers.DataSource = dt;
                 }

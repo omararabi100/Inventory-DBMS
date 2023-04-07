@@ -22,17 +22,31 @@ namespace Project_Final
 
         private void AddStaffMembers_Load(object sender, EventArgs e)
         {
-
+            if (Global.CurrentLogInType == "WareHouseManager")
+            {
+                txtWMID.Visible = false;
+                lblWMID.Visible = false;
+                txtDS.Visible = true;
+                lblDS.Visible = true;
+            }
+            else
+            {
+                txtWMID.Visible = true;
+                lblWMID.Visible = true;
+                txtDS.Visible = false;
+                lblDS.Visible = false;
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtADID.Text = "";
+
             txtDS.Text = "";
             txtName.Text = "";
             txtPhone.Text = "";
             txtSID.Text = "";
             txtUserName.Text = "";
+            txtEmail.Text = "";
             txtWMID.Text = "";
         }
 
@@ -54,11 +68,20 @@ namespace Project_Final
                 SqlCommand cmd2 = new SqlCommand("addStaff", Con);
                 cmd2.CommandType = CommandType.StoredProcedure;
                 cmd2.Parameters.AddWithValue("@SID", int.Parse(txtSID.Text));
-                cmd2.Parameters.AddWithValue("@ADID", int.Parse(txtADID.Text));
-                cmd2.Parameters.AddWithValue("@WMID", int.Parse(txtWMID.Text));
+                if (Global.CurrentLogInType == "Admin")
+                {
+                    cmd2.Parameters.AddWithValue("@ADID", Global.CurrentSignInID);
+                    cmd2.Parameters.AddWithValue("@WMID", txtWMID.Text);
+                }
+                else if(Global.CurrentLogInType == "WareHouseManager")
+                {
+                    cmd2.Parameters.AddWithValue("@ADID", null);
+                    cmd2.Parameters.AddWithValue("@WMID", Global.CurrentSignInID);
+                }
                 cmd2.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd2.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd2.Parameters.AddWithValue("@Phone", Int64.Parse(txtPhone.Text));
+                cmd2.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd2.Parameters.AddWithValue("@DailySchedule", txtDS.Text);
 
                 cmd2.ExecuteNonQuery();
@@ -76,14 +99,30 @@ namespace Project_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            admin form = new admin();
-            this.Close();
-            form.LoadStaffData();
-            form.LoadWareHouseManagerData();
-            form.LoadInventoryControlManagerData();
-            form.LoadAccountantData();
-            form.LoadAdminData();
-            form.Show();
+            if (Global.CurrentLogInType == "Admin")
+            {
+                admin form = new admin();
+                this.Close();
+                form.LoadStaffData();
+                form.LoadWareHouseManagerData();
+                form.LoadInventoryControlManagerData();
+                form.LoadAccountantData();
+                form.LoadAdminData();
+                form.Show();
+            }
+            else
+            {
+                warehousem form = new warehousem();
+                this.Close();
+                //form.LoadStaffData();
+                form.Show();
+
+            }
+        }
+
+        private void txtWMID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
