@@ -62,9 +62,6 @@
             this.btnModifyUsers = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_addUsers = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
@@ -73,6 +70,8 @@
             this.dvICM = new System.Windows.Forms.DataGridView();
             this.dvWareHouseManager = new System.Windows.Forms.DataGridView();
             this.dvStaff = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -88,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvAccountant)).BeginInit();
@@ -584,44 +582,6 @@
             this.btn_addUsers.UseVisualStyleBackColor = false;
             this.btn_addUsers.Click += new System.EventHandler(this.btn_addUsers_Click);
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(163, 194);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 72);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Users";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(282, 207);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(42, 48);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 4;
-            this.pictureBox17.TabStop = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(163, 208);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(108, 28);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Visible = false;
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -706,25 +666,42 @@
             this.dvStaff.Size = new System.Drawing.Size(240, 306);
             this.dvStaff.TabIndex = 18;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(165, 235);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(162, 20);
+            this.txtSearch.TabIndex = 19;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(162, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Search By Name:";
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 618);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dvStaff);
             this.Controls.Add(this.dvWareHouseManager);
             this.Controls.Add(this.dvICM);
             this.Controls.Add(this.dvAccountant);
             this.Controls.Add(this.dvAdmin);
             this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -746,7 +723,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvAccountant)).EndInit();
@@ -786,9 +762,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btn_addUsers;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.PictureBox pictureBox22;
@@ -804,5 +777,7 @@
         private System.Windows.Forms.DataGridView dvICM;
         private System.Windows.Forms.DataGridView dvWareHouseManager;
         private System.Windows.Forms.DataGridView dvStaff;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label5;
     }
 }

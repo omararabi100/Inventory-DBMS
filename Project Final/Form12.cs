@@ -204,7 +204,7 @@ namespace Project_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            admin form = new admin(null);
+            admin form = new admin();
             this.Close();
             form.LoadStaffData();
             form.LoadWareHouseManagerData();

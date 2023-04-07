@@ -14,13 +14,13 @@ namespace Project_Final
 {
     public partial class admin : Form
     {
-        DataTable dt = new DataTable();
+
+
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
 
-        public admin(String Username)
+        public admin()
         {
             InitializeComponent();
-            label12.Text = Username;
         }
 
         public void LoadAdminData()
@@ -118,7 +118,7 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            admin frm = new admin(label12.Text);
+            admin frm = new admin();
             frm.Show();
             this.Hide();
         }
@@ -175,5 +175,67 @@ namespace Project_Final
         {
 
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                
+
+                    SqlCommand cmd = new SqlCommand("Select * from Admin where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    dt.Clear();
+                    da.Fill(dt);
+                    dvAdmin.DataSource = dt;
+                
+                    
+                    SqlCommand cmd1 = new SqlCommand("Select * from Accountant where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da1 = new SqlDataAdapter();
+                    DataTable dt1 = new DataTable();
+                    da1.SelectCommand = cmd1;
+                    dt1.Clear();
+                    da1.Fill(dt1);
+                    dvAccountant.DataSource = dt1;
+                
+
+                    SqlCommand cmd2 = new SqlCommand("Select * from WareHouseManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da2 = new SqlDataAdapter();
+                    DataTable dt2 = new DataTable();
+                    da2.SelectCommand = cmd2;
+                    dt2.Clear();
+                    da2.Fill(dt2);
+                    dvWareHouseManager.DataSource = dt2;
+                
+
+                    SqlCommand cmd3 = new SqlCommand("Select * from InventoryControlManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlDataAdapter da3 = new SqlDataAdapter();
+                    DataTable dt3 = new DataTable();
+                    da3.SelectCommand = cmd3;
+                    dt3.Clear();
+                    da3.Fill(dt3);
+                    dvICM.DataSource = dt3;
+
+
+                    SqlCommand cmd4 = new SqlCommand("Select * from Staff where Name like '%" + txtSearch.Text + "%'", con);
+                    DataTable dt4 = new DataTable();
+                    dt4.Load(cmd4.ExecuteReader());
+                    dvStaff.DataSource = dt4;
+                
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
     }
+    
 }

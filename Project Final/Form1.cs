@@ -132,7 +132,7 @@ namespace Project_Final
 
                     else if (dbt.Rows[0][2].ToString()== "Admin")
                     {
-                        admin objform3 = new admin(txtUname.Text);
+                        admin objform3 = new admin();
                         this.Hide();
                         objform3.Show();
                     }

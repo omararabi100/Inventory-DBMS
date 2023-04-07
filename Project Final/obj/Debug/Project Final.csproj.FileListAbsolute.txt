@@ -152,7 +152,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.warehousem.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.ICmanager.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Staff.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Users.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form8.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Menuform.resources
