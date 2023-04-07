@@ -46,6 +46,7 @@
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUpdate
             // 
@@ -96,6 +97,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(133, 20);
             this.txtSearch.TabIndex = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dvgUsers
             // 

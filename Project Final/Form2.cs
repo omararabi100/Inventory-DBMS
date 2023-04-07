@@ -121,5 +121,12 @@ namespace Project_Final
         {
 
         }
+
+        private void btnSalary_Click(object sender, EventArgs e)
+        {
+            Salary form = new Salary();
+            form.ShowDialog();
+            this.Hide();
+        }
     }
 }

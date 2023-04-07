@@ -449,7 +449,7 @@
             // 
             this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(124, 17);
+            this.pictureBox17.Location = new System.Drawing.Point(124, 56);
             this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(42, 48);
@@ -462,7 +462,7 @@
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(5, 18);
+            this.textBox6.Location = new System.Drawing.Point(5, 57);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -475,7 +475,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 4);
+            this.label5.Location = new System.Drawing.Point(5, 43);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 72);
@@ -491,7 +491,7 @@
             this.panel3.Location = new System.Drawing.Point(148, 161);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(934, 176);
+            this.panel3.Size = new System.Drawing.Size(934, 254);
             this.panel3.TabIndex = 17;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
