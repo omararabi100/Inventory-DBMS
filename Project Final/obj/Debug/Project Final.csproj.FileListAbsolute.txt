@@ -145,8 +145,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form11.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form12.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.addProduct.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form14.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Form15.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.accountant.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.admin.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.warehousem.resources
@@ -167,3 +165,5 @@ C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ModifyUser.resources
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.OrdersForm.resources
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddOrder.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddCustomer.resources

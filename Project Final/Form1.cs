@@ -122,16 +122,20 @@ namespace Project_Final
                 adapter.Fill(dbt);
                 if (dbt.Rows.Count > 0)
                 {
-               
+                    
                     if (dbt.Rows[0][2].ToString() == "Accountant")
                     {
-                        accountant objform2 = new accountant(txtUname.Text);
+                        Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                        Global.CurrentLogInType = "Accountant";
+                        accountant objform2 = new accountant();
                         this.Hide();
                         objform2.Show();
                     }
 
                     else if (dbt.Rows[0][2].ToString()== "Admin")
                     {
+                        Global.CurrentUserName= dbt.Rows[0][0].ToString();
+                        Global.CurrentLogInType = "Admin";
                         admin objform3 = new admin();
                         this.Hide();
                         objform3.Show();
@@ -139,21 +143,29 @@ namespace Project_Final
 
                     else if (dbt.Rows[0][2].ToString()== "WareHouseManager")
                     {
-                        warehousem objform4 = new warehousem(txtUname.Text); 
+                        Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                        Global.CurrentLogInType = "WareHouseManager";
+                        warehousem objform4 = new warehousem(); 
                         this.Hide();
                         objform4.Show();
                     }
 
-                    else if (dbt.Rows[0][0].ToString()== "InventoryControlManager")
+                    else if (dbt.Rows[0][2].ToString()== "InventoryControlManager")
                     {
-                        ICmanager objform5 = new ICmanager(txtUname.Text);
+                        Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                        Global.CurrentLogInType = "InventoryControlManager";
+                        ICmanager objform5 = new ICmanager();
                         this.Hide();
                         objform5.Show();
                     }
 
-                    else
+                    else if (dbt.Rows[0][3].ToString()=="Staff")
                     {
-
+                        Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                        Global.CurrentLogInType = "Staff";
+                        Staff objform6 = new Staff();
+                        this.Hide();
+                        objform6.Show();
                     }
 
                 }

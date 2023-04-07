@@ -14,10 +14,10 @@ namespace Project_Final
 {
     public partial class warehousem : Form
     {
-        public warehousem(String Username)
+        public warehousem()
         {
             InitializeComponent();
-            label8.Text = Username;
+            lblUname.Text = Global.CurrentUserName;
         }
 
         private void warehousem_Load(object sender, EventArgs e)
@@ -25,14 +25,17 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where UserName = '" + label8.Text.Trim() + "'", con);
+            SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where UserName = '" + lblUname.Text.Trim() + "'", con);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                label2.Text = dt.Rows[0][3].ToString();
-                label6.Text = dt.Rows[0][7].ToString();
+                Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
+                Global.CurrentName = dt.Rows[0][3].ToString();
+                Global.CurrentEmail = dt.Rows[0][7].ToString();
+                lblName.Text = dt.Rows[0][3].ToString();
+                lblEmail.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
         }
@@ -51,6 +54,15 @@ namespace Project_Final
 
         private void label8_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            AddStaffMembers form = new AddStaffMembers();
+            form.ShowDialog();
+            this.Hide();
+
 
         }
     }

@@ -16,11 +16,11 @@ namespace Project_Final
     {
         
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        public accountant(string str_value)
+        public accountant()
         {
             InitializeComponent();
-            label11.Text = str_value;
-           
+            lblUname.Text = Global.CurrentUserName;
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -53,14 +53,17 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from Accountant where UserName = '"+label11.Text.Trim()+ "'", con);
+            SqlCommand cmd = new SqlCommand("Select * from Accountant where UserName = '"+lblUname.Text.Trim()+ "'", con);
             SqlDataAdapter adapter= new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             if (dt.Rows.Count>0)
             {
-                label8.Text = dt.Rows[0][3].ToString();
-                label9.Text = dt.Rows[0][7].ToString();
+                Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
+                Global.CurrentName = dt.Rows[0][3].ToString();
+                Global.CurrentEmail = dt.Rows[0][7].ToString();
+                lblName.Text = dt.Rows[0][3].ToString();
+                lblEmail.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
 

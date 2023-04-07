@@ -21,6 +21,7 @@ namespace Project_Final
         public admin()
         {
             InitializeComponent();
+            lblUname.Text = Global.CurrentUserName;
         }
 
         public void LoadAdminData()
@@ -94,14 +95,17 @@ namespace Project_Final
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from Admin where UserName = '" + label12.Text.Trim() + "'", con);
+            SqlCommand cmd = new SqlCommand("Select * from Admin where UserName = '" + lblUname.Text.Trim() + "'", con);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                label2.Text = dt.Rows[0][3].ToString();
-                label4.Text = dt.Rows[0][7].ToString();
+                Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
+                Global.CurrentName = dt.Rows[0][3].ToString();
+                Global.CurrentEmail = dt.Rows[0][7].ToString();
+                lblName.Text = dt.Rows[0][3].ToString();
+                lblEmail.Text = dt.Rows[0][7].ToString();
             }
             LoadStaffData();
             LoadWareHouseManagerData();
@@ -235,6 +239,11 @@ namespace Project_Final
             }
             if (con.State == ConnectionState.Open)
                 con.Close();
+        }
+
+        private void lblUname_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
