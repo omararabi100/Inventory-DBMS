@@ -149,6 +149,11 @@ namespace Project_Final
             newForm.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

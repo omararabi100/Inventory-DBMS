@@ -14,10 +14,79 @@ namespace Project_Final
 {
     public partial class admin : Form
     {
+        DataTable dt = new DataTable();
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+
         public admin(String Username)
         {
             InitializeComponent();
             label12.Text = Username;
+        }
+
+        public void LoadAdminData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvAdmin.DataSource = null;
+            SqlCommand cmd2 = new SqlCommand("ShowAdmin", con);
+            DataTable dt2 = new DataTable();
+            dt2.Clear();
+            dt2.Load(cmd2.ExecuteReader());
+            dvAdmin.DataSource = dt2;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+        public void LoadAccountantData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvAccountant.DataSource = null;
+            SqlCommand cmd3 = new SqlCommand("ShowAccountant", con);
+            DataTable dt1 = new DataTable();
+            dt1.Clear();
+            dt1.Load(cmd3.ExecuteReader());
+            dvAccountant.DataSource = dt1;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+        public void LoadInventoryControlManagerData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvICM.DataSource = null;
+            SqlCommand cmd4 = new SqlCommand("ShowICM", con);
+            DataTable dt4 = new DataTable();
+            dt4.Clear();
+            dt4.Load(cmd4.ExecuteReader());
+            dvICM.DataSource = dt4;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+        public void LoadWareHouseManagerData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvWareHouseManager.DataSource = null;
+            SqlCommand cmd5 = new SqlCommand("ShowWM", con);
+            DataTable dt5 = new DataTable();
+            dt5.Clear();
+            dt5.Load(cmd5.ExecuteReader());
+            dvWareHouseManager.DataSource = dt5;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+        public void LoadStaffData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvStaff.DataSource = null;
+            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
+            DataTable dt6 = new DataTable();
+            dt6.Clear();
+            dt6.Load(cmd6.ExecuteReader());
+            dvStaff.DataSource = dt6;
+            if (con.State == ConnectionState.Open)
+                con.Close();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -34,6 +103,11 @@ namespace Project_Final
                 label2.Text = dt.Rows[0][3].ToString();
                 label4.Text = dt.Rows[0][7].ToString();
             }
+            LoadStaffData();
+            LoadWareHouseManagerData();
+            LoadInventoryControlManagerData();
+            LoadAccountantData();
+            LoadAdminData();
             con.Close();
         }
 
@@ -68,17 +142,36 @@ namespace Project_Final
 
         private void btn_addUsers_Click(object sender, EventArgs e)
         {
-            Form12 form = new Form12();
+            Form12 form = new Form12();           
             form.ShowDialog();
+            this.Hide();
         }
 
         private void btnModifyUsers_Click(object sender, EventArgs e)
         {
             ModifyUser form = new ModifyUser();
             form.ShowDialog();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            AddStaffMembers form = new AddStaffMembers();
+            form.ShowDialog();
+            this.Hide();
+        }
+
+        private void dvAdmin_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
         }

@@ -17,7 +17,7 @@ namespace Project_Final
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new ModifyUser());
+            Application.Run(new Form1());
 
         }
     }

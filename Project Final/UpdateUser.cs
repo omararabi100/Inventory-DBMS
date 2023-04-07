@@ -312,5 +312,17 @@ namespace Project_Final
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            admin form = new admin(null);
+            this.Close();
+            form.LoadStaffData();
+            form.LoadWareHouseManagerData();
+            form.LoadInventoryControlManagerData();
+            form.LoadAccountantData();
+            form.LoadAdminData();
+            form.Show();
+        }
     }
 }
