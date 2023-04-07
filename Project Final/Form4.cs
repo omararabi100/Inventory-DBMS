@@ -70,5 +70,10 @@ namespace Project_Final
         {
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
