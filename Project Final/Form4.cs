@@ -65,5 +65,10 @@ namespace Project_Final
 
 
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

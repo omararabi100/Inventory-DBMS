@@ -232,7 +232,17 @@ namespace Project_Final
 
         private void RemoveUser_Load(object sender, EventArgs e)
         {
-
+            if (Global.CurrentLogInType == "WareHouseManager")
+            {
+                PositionComb.SelectedIndex = PositionComb.Items.IndexOf("Staff Member");
+                lblSP.Visible = false;
+                PositionComb.Visible = false;
+            }
+            else
+            {
+                lblSP.Visible = true;
+                PositionComb.Visible = true;
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

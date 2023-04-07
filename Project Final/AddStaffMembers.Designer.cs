@@ -47,13 +47,15 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblWMID = new System.Windows.Forms.Label();
             this.txtWMID = new System.Windows.Forms.TextBox();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.cbRole = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 28);
+            this.label1.Location = new System.Drawing.Point(18, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 0;
@@ -61,7 +63,7 @@
             // 
             // txtSID
             // 
-            this.txtSID.Location = new System.Drawing.Point(159, 30);
+            this.txtSID.Location = new System.Drawing.Point(159, 38);
             this.txtSID.Name = "txtSID";
             this.txtSID.Size = new System.Drawing.Size(189, 20);
             this.txtSID.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(391, 26);
+            this.label4.Location = new System.Drawing.Point(407, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 7;
@@ -91,7 +93,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(391, 80);
+            this.label5.Location = new System.Drawing.Point(407, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 8;
@@ -101,7 +103,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(391, 130);
+            this.label6.Location = new System.Drawing.Point(407, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 9;
@@ -111,7 +113,7 @@
             // 
             this.lblDS.AutoSize = true;
             this.lblDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDS.Location = new System.Drawing.Point(391, 181);
+            this.lblDS.Location = new System.Drawing.Point(18, 225);
             this.lblDS.Name = "lblDS";
             this.lblDS.Size = new System.Drawing.Size(123, 20);
             this.lblDS.TabIndex = 10;
@@ -119,7 +121,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(520, 28);
+            this.txtUserName.Location = new System.Drawing.Point(520, 36);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(189, 20);
             this.txtUserName.TabIndex = 13;
@@ -140,7 +142,7 @@
             // 
             // txtDS
             // 
-            this.txtDS.Location = new System.Drawing.Point(520, 181);
+            this.txtDS.Location = new System.Drawing.Point(158, 227);
             this.txtDS.Multiline = true;
             this.txtDS.Name = "txtDS";
             this.txtDS.Size = new System.Drawing.Size(189, 20);
@@ -172,7 +174,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(60, 130);
+            this.label8.Location = new System.Drawing.Point(17, 132);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 20);
             this.label8.TabIndex = 21;
@@ -189,7 +191,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(55, 82);
+            this.label9.Location = new System.Drawing.Point(17, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 23;
@@ -206,7 +208,7 @@
             // 
             this.lblWMID.AutoSize = true;
             this.lblWMID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWMID.Location = new System.Drawing.Point(56, 181);
+            this.lblWMID.Location = new System.Drawing.Point(407, 179);
             this.lblWMID.Name = "lblWMID";
             this.lblWMID.Size = new System.Drawing.Size(58, 20);
             this.lblWMID.TabIndex = 25;
@@ -214,17 +216,45 @@
             // 
             // txtWMID
             // 
-            this.txtWMID.Location = new System.Drawing.Point(159, 181);
+            this.txtWMID.Location = new System.Drawing.Point(520, 177);
             this.txtWMID.Name = "txtWMID";
             this.txtWMID.Size = new System.Drawing.Size(189, 20);
             this.txtWMID.TabIndex = 26;
             this.txtWMID.TextChanged += new System.EventHandler(this.txtWMID_TextChanged);
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.Location = new System.Drawing.Point(18, 179);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(46, 20);
+            this.lblRole.TabIndex = 29;
+            this.lblRole.Text = "Role";
+            // 
+            // cbRole
+            // 
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.Items.AddRange(new object[] {
+            "Janitor",
+            "Worker",
+            "Security",
+            "Material Handler",
+            "Cleark",
+            "Loader",
+            "Forklift Operator"});
+            this.cbRole.Location = new System.Drawing.Point(158, 181);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(189, 21);
+            this.cbRole.TabIndex = 30;
             // 
             // AddStaffMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 383);
+            this.Controls.Add(this.cbRole);
+            this.Controls.Add(this.lblRole);
             this.Controls.Add(this.txtWMID);
             this.Controls.Add(this.lblWMID);
             this.Controls.Add(this.txtEmail);
@@ -273,5 +303,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblWMID;
         private System.Windows.Forms.TextBox txtWMID;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.ComboBox cbRole;
     }
 }
