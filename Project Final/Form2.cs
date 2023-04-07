@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Xml.Linq;
+using System.IO;
+using System.Reflection.Emit;
 
 namespace Project_Final
 {
@@ -45,7 +47,33 @@ namespace Project_Final
 
         private void button16_Click(object sender, EventArgs e)
         {
+            string imglocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| jpeg file(*.jpeg)|*jpeg| All Files(*.*)|*.* ";
 
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imglocation = dialog.FileName.ToString();
+                    pictureBox16.ImageLocation = imglocation;
+                }
+                byte[] images = null;
+                FileStream stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(stream);
+                images = brs.ReadBytes((int)stream.Length);
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Update Accountant set Photo = @image where UserName ='" + lblUname.Text + "'", con);
+                cmd.Parameters.Add(new SqlParameter("@image", images));
+                int n = cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("An error occured");
+            }
         }
 
         private void accountant_Load(object sender, EventArgs e)
@@ -66,8 +94,10 @@ namespace Project_Final
                 lblEmail.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
+            
 
         }
+        
 
         private void label8_Click(object sender, EventArgs e)
         {

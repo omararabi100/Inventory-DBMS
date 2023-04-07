@@ -111,16 +111,12 @@ C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form10.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form11.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form12.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form14.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form15.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.accountant.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.admin.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.warehousem.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ICmanager.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Staff.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Users.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form8.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form9.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Menuform.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
@@ -167,3 +163,7 @@ C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddOrder.resources
 C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.AddCustomer.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddCustomer.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddOrder.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.OrdersForm.resources
