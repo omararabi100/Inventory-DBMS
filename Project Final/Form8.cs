@@ -13,7 +13,7 @@ namespace Project_Final
 {
     public partial class Form8 : Form
     {
-        SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public Form8()
         {
             InitializeComponent();
@@ -112,7 +112,8 @@ namespace Project_Final
         private void button9_Click(object sender, EventArgs e)
         {
             Form form = new addProduct();
-            form.ShowDialog();
+            this.Hide();
+            form.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -136,13 +137,66 @@ namespace Project_Final
             {
                 MessageBox.Show("Error");
             }
-
+            if (con.State == ConnectionState.Open)
+                con.Close();
 
         }
 
-        private void button11_Click(object sender, EventArgs e)
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Select * from product where Name like '%" + textBox1.Text + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
+                dt.Clear();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Select * from product where Name like '%" + textBox1.Text + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
+                dt.Clear();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
         }
     }
 }

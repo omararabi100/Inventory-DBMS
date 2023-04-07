@@ -125,7 +125,7 @@ namespace Project_Final
                
                     if (dbt.Rows[0][2].ToString() == "Accountant")
                     {
-                        accountant objform2 = new accountant();
+                        accountant objform2 = new accountant(txtUname.Text);
                         this.Hide();
                         objform2.Show();
                     }
@@ -139,14 +139,14 @@ namespace Project_Final
 
                     else if (dbt.Rows[0][2].ToString()== "WareHouseManager")
                     {
-                        warehousem objform4 = new warehousem(); 
+                        warehousem objform4 = new warehousem(txtUname.Text); 
                         this.Hide();
                         objform4.Show();
                     }
 
                     else if (dbt.Rows[0][0].ToString()== "InventoryControlManager")
                     {
-                        ICmanager objform5 = new ICmanager();
+                        ICmanager objform5 = new ICmanager(txtUname.Text);
                         this.Hide();
                         objform5.Show();
                     }

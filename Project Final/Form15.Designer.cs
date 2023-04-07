@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnClear = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btmExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(11, 415);
+            this.btnClear.Location = new System.Drawing.Point(11, 374);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(64, 26);
@@ -63,16 +63,17 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button2
+            // btmExit
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(407, 415);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 26);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Discard";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btmExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmExit.Location = new System.Drawing.Point(426, 374);
+            this.btmExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btmExit.Name = "btmExit";
+            this.btmExit.Size = new System.Drawing.Size(64, 26);
+            this.btmExit.TabIndex = 41;
+            this.btmExit.Text = "Exit";
+            this.btmExit.UseVisualStyleBackColor = true;
+            this.btmExit.Click += new System.EventHandler(this.btmExit_Click);
             // 
             // label6
             // 
@@ -89,26 +90,27 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(271, 27);
+            this.label4.Location = new System.Drawing.Point(246, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 39;
             this.label4.Text = "Discount";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtDiscount
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(374, 26);
+            this.txtDiscount.Location = new System.Drawing.Point(375, 27);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(179, 24);
+            this.txtDiscount.Size = new System.Drawing.Size(160, 24);
             this.txtDiscount.TabIndex = 37;
             // 
             // txtOID
             // 
             this.txtOID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOID.Location = new System.Drawing.Point(82, 27);
+            this.txtOID.Location = new System.Drawing.Point(69, 27);
             this.txtOID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOID.Name = "txtOID";
             this.txtOID.Size = new System.Drawing.Size(160, 24);
@@ -117,7 +119,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(484, 415);
+            this.btnAdd.Location = new System.Drawing.Point(494, 374);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 26);
@@ -130,21 +132,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(271, 77);
+            this.label2.Location = new System.Drawing.Point(246, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
+            this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Ammount Spent";
+            this.label2.Text = "Amount Spent";
             // 
             // txtSpent
             // 
             this.txtSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpent.Location = new System.Drawing.Point(400, 77);
+            this.txtSpent.Location = new System.Drawing.Point(375, 73);
             this.txtSpent.Margin = new System.Windows.Forms.Padding(2);
             this.txtSpent.Name = "txtSpent";
-            this.txtSpent.Size = new System.Drawing.Size(153, 24);
+            this.txtSpent.Size = new System.Drawing.Size(160, 24);
             this.txtSpent.TabIndex = 37;
+            this.txtSpent.TextChanged += new System.EventHandler(this.txtSpent_TextChanged);
             // 
             // label1
             // 
@@ -160,7 +163,7 @@
             // txtAID
             // 
             this.txtAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAID.Location = new System.Drawing.Point(82, 73);
+            this.txtAID.Location = new System.Drawing.Point(69, 73);
             this.txtAID.Margin = new System.Windows.Forms.Padding(2);
             this.txtAID.Name = "txtAID";
             this.txtAID.Size = new System.Drawing.Size(160, 24);
@@ -180,7 +183,7 @@
             // txtSID
             // 
             this.txtSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSID.Location = new System.Drawing.Point(82, 124);
+            this.txtSID.Location = new System.Drawing.Point(69, 120);
             this.txtSID.Margin = new System.Windows.Forms.Padding(2);
             this.txtSID.Name = "txtSID";
             this.txtSID.Size = new System.Drawing.Size(160, 24);
@@ -190,7 +193,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(269, 128);
+            this.label5.Location = new System.Drawing.Point(246, 125);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
@@ -200,10 +203,10 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(388, 124);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(375, 120);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(153, 24);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(160, 24);
             this.txtPhoneNumber.TabIndex = 48;
             // 
             // dataGridView1
@@ -248,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 448);
+            this.ClientSize = new System.Drawing.Size(574, 412);
             this.Controls.Add(this.RemoveProductBtn);
             this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.dataGridView2);
@@ -260,7 +263,7 @@
             this.Controls.Add(this.txtAID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btmExit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -282,7 +285,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btmExit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDiscount;

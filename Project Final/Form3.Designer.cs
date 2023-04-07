@@ -57,17 +57,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btn_RemoveUser = new System.Windows.Forms.Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.btnModifyUsers = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_addUsers = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.dvAdmin = new System.Windows.Forms.DataGridView();
+            this.dvAccountant = new System.Windows.Forms.DataGridView();
+            this.dvICM = new System.Windows.Forms.DataGridView();
+            this.dvWareHouseManager = new System.Windows.Forms.DataGridView();
+            this.dvStaff = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -81,10 +85,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAccountant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvICM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvWareHouseManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -365,6 +373,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(933, 156);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label12
             // 
@@ -398,6 +407,7 @@
             this.label2.Size = new System.Drawing.Size(60, 24);
             this.label2.TabIndex = 19;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox16
             // 
@@ -458,16 +468,16 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.btn_RemoveUser);
+            this.panel3.Controls.Add(this.btnAddStaff);
+            this.panel3.Controls.Add(this.pictureBox11);
+            this.panel3.Controls.Add(this.btnModifyUsers);
             this.panel3.Controls.Add(this.pictureBox10);
             this.panel3.Controls.Add(this.btn_addUsers);
-            this.panel3.Location = new System.Drawing.Point(148, 419);
+            this.panel3.Location = new System.Drawing.Point(148, 497);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(933, 190);
+            this.panel3.Size = new System.Drawing.Size(933, 112);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox8
@@ -476,32 +486,67 @@
             this.pictureBox8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(504, 49);
+            this.pictureBox8.Location = new System.Drawing.Point(501, 29);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 60);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabIndex = 19;
             this.pictureBox8.TabStop = false;
             // 
-            // btn_RemoveUser
+            // btnAddStaff
             // 
-            this.btn_RemoveUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_RemoveUser.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_RemoveUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_RemoveUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RemoveUser.FlatAppearance.BorderSize = 0;
-            this.btn_RemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RemoveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_RemoveUser.Location = new System.Drawing.Point(384, 49);
-            this.btn_RemoveUser.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_RemoveUser.Name = "btn_RemoveUser";
-            this.btn_RemoveUser.Size = new System.Drawing.Size(170, 60);
-            this.btn_RemoveUser.TabIndex = 14;
-            this.btn_RemoveUser.Text = "Remove Users";
-            this.btn_RemoveUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RemoveUser.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddStaff.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddStaff.FlatAppearance.BorderSize = 0;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStaff.Location = new System.Drawing.Point(381, 29);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(170, 60);
+            this.btnAddStaff.TabIndex = 18;
+            this.btnAddStaff.Text = "Add Staff";
+            this.btnAddStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(780, 29);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 17;
+            this.pictureBox11.TabStop = false;
+            // 
+            // btnModifyUsers
+            // 
+            this.btnModifyUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModifyUsers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnModifyUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnModifyUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModifyUsers.FlatAppearance.BorderSize = 0;
+            this.btnModifyUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifyUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModifyUsers.Location = new System.Drawing.Point(660, 29);
+            this.btnModifyUsers.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModifyUsers.Name = "btnModifyUsers";
+            this.btnModifyUsers.Size = new System.Drawing.Size(170, 60);
+            this.btnModifyUsers.TabIndex = 16;
+            this.btnModifyUsers.Text = "Modify Users";
+            this.btnModifyUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModifyUsers.UseVisualStyleBackColor = false;
+            this.btnModifyUsers.Click += new System.EventHandler(this.btnModifyUsers_Click);
             // 
             // pictureBox10
             // 
@@ -509,7 +554,7 @@
             this.pictureBox10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(233, 49);
+            this.pictureBox10.Location = new System.Drawing.Point(229, 29);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(50, 60);
@@ -527,7 +572,7 @@
             this.btn_addUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_addUsers.Location = new System.Drawing.Point(113, 49);
+            this.btn_addUsers.Location = new System.Drawing.Point(109, 29);
             this.btn_addUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addUsers.Name = "btn_addUsers";
             this.btn_addUsers.Size = new System.Drawing.Size(170, 60);
@@ -537,50 +582,12 @@
             this.btn_addUsers.UseVisualStyleBackColor = false;
             this.btn_addUsers.Click += new System.EventHandler(this.btn_addUsers_Click);
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(183, 184);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 72);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Users";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(302, 197);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(42, 48);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 4;
-            this.pictureBox17.TabStop = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(183, 198);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(108, 28);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Visible = false;
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(183, 285);
+            this.label11.Location = new System.Drawing.Point(165, 408);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 72);
@@ -593,7 +600,7 @@
             this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(184, 298);
+            this.textBox11.Location = new System.Drawing.Point(166, 421);
             this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -605,7 +612,7 @@
             // 
             this.pictureBox22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(303, 298);
+            this.pictureBox22.Location = new System.Drawing.Point(285, 421);
             this.pictureBox22.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(42, 48);
@@ -613,55 +620,91 @@
             this.pictureBox22.TabIndex = 4;
             this.pictureBox22.TabStop = false;
             // 
-            // pictureBox11
+            // dvAdmin
             // 
-            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(784, 49);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 17;
-            this.pictureBox11.TabStop = false;
+            this.dvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvAdmin.Location = new System.Drawing.Point(351, 184);
+            this.dvAdmin.Name = "dvAdmin";
+            this.dvAdmin.ReadOnly = true;
+            this.dvAdmin.Size = new System.Drawing.Size(240, 150);
+            this.dvAdmin.TabIndex = 14;
+            this.dvAdmin.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dvAdmin_CellMouseClick);
             // 
-            // button9
+            // dvAccountant
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(664, 49);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(170, 60);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "Modify Images";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.dvAccountant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvAccountant.Location = new System.Drawing.Point(351, 340);
+            this.dvAccountant.Name = "dvAccountant";
+            this.dvAccountant.ReadOnly = true;
+            this.dvAccountant.Size = new System.Drawing.Size(240, 150);
+            this.dvAccountant.TabIndex = 15;
+            // 
+            // dvICM
+            // 
+            this.dvICM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvICM.Location = new System.Drawing.Point(597, 184);
+            this.dvICM.Name = "dvICM";
+            this.dvICM.ReadOnly = true;
+            this.dvICM.Size = new System.Drawing.Size(240, 150);
+            this.dvICM.TabIndex = 16;
+            // 
+            // dvWareHouseManager
+            // 
+            this.dvWareHouseManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvWareHouseManager.Location = new System.Drawing.Point(597, 340);
+            this.dvWareHouseManager.Name = "dvWareHouseManager";
+            this.dvWareHouseManager.ReadOnly = true;
+            this.dvWareHouseManager.Size = new System.Drawing.Size(240, 150);
+            this.dvWareHouseManager.TabIndex = 17;
+            // 
+            // dvStaff
+            // 
+            this.dvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvStaff.Location = new System.Drawing.Point(841, 184);
+            this.dvStaff.Name = "dvStaff";
+            this.dvStaff.ReadOnly = true;
+            this.dvStaff.Size = new System.Drawing.Size(240, 306);
+            this.dvStaff.TabIndex = 18;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(165, 235);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(162, 20);
+            this.txtSearch.TabIndex = 19;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(162, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Search By Name:";
             // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 618);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.dvStaff);
+            this.Controls.Add(this.dvWareHouseManager);
+            this.Controls.Add(this.dvICM);
+            this.Controls.Add(this.dvAccountant);
+            this.Controls.Add(this.dvAdmin);
             this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
@@ -678,10 +721,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAccountant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvICM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvWareHouseManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,18 +762,22 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btn_addUsers;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btn_RemoveUser;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnModifyUsers;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.DataGridView dvAdmin;
+        private System.Windows.Forms.DataGridView dvAccountant;
+        private System.Windows.Forms.DataGridView dvICM;
+        private System.Windows.Forms.DataGridView dvWareHouseManager;
+        private System.Windows.Forms.DataGridView dvStaff;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label5;
     }
 }
