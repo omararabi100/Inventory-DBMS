@@ -32,7 +32,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PositionComb = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSP = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).BeginInit();
@@ -79,14 +79,14 @@
             this.PositionComb.TabIndex = 3;
             this.PositionComb.SelectedIndexChanged += new System.EventHandler(this.PositionComb_SelectedIndexChanged);
             // 
-            // label2
+            // lblSP
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Select Position:";
+            this.lblSP.AutoSize = true;
+            this.lblSP.Location = new System.Drawing.Point(13, 170);
+            this.lblSP.Name = "lblSP";
+            this.lblSP.Size = new System.Drawing.Size(80, 13);
+            this.lblSP.TabIndex = 4;
+            this.lblSP.Text = "Select Position:";
             // 
             // btnUpdate
             // 
@@ -115,7 +115,7 @@
             this.ClientSize = new System.Drawing.Size(932, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSP);
             this.Controls.Add(this.PositionComb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
@@ -135,7 +135,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox PositionComb;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSP;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnExit;
     }

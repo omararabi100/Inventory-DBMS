@@ -167,5 +167,4 @@ C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddCustomer.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddOrder.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.OrdersForm.resources
-C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
-C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Suppliers.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Salary.resources
