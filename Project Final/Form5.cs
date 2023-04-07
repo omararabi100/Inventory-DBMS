@@ -14,6 +14,7 @@ namespace Project_Final
 {
     public partial class ICmanager : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public ICmanager()
         {
             InitializeComponent();
@@ -86,5 +87,45 @@ namespace Project_Final
             }
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            
+            Form8 objform = new Form8();
+            this.Hide();
+            objform.Show();
+            
+
+            
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form8 objform = new Form8();
+            this.Hide();
+            objform.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ICmanager objform5 = new ICmanager();
+            this.Hide();
+            objform5.Show();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+
+
 
 namespace Project_Final
 {
     public partial class Form8 : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+        int Pid;
         public Form8()
         {
             InitializeComponent();
@@ -28,7 +32,8 @@ namespace Project_Final
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+             Pid = Convert.ToInt32(row.Cells[0].Value);
         }
 
         private void Form8_Load(object sender, EventArgs e)
@@ -194,6 +199,54 @@ namespace Project_Final
             catch
             {
                 MessageBox.Show("Error");
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+            if (Global.CurrentLogInType == "InventoryControlManager")
+            {
+                ICmanager objform5 = new ICmanager();
+                this.Hide();
+                objform5.Show();
+
+            }
+            else
+            {
+                accountant objform2 = new accountant();
+                this.Hide();
+                objform2.Show();
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                int rowindex = dataGridView1.CurrentCell.RowIndex;
+                dataGridView1.Rows.RemoveAt(rowindex);
+                string sql = "delete from product where PID = "+Pid+"";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+               
+
+                MessageBox.Show("Product deleted Successfully");
+                
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+
             }
             if (con.State == ConnectionState.Open)
                 con.Close();
