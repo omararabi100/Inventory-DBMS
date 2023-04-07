@@ -232,7 +232,17 @@ namespace Project_Final
 
         private void RemoveUser_Load(object sender, EventArgs e)
         {
-
+            if (Global.CurrentLogInType == "WareHouseManager")
+            {
+                PositionComb.SelectedIndex = PositionComb.Items.IndexOf("Staff Member");
+                lblSP.Visible = false;
+                PositionComb.Visible = false;
+            }
+            else
+            {
+                lblSP.Visible = true;
+                PositionComb.Visible = true;
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -244,7 +254,7 @@ namespace Project_Final
                     con.Open();
                 if (PositionComb.SelectedItem.ToString() == "Administrator")
                 {
-                    SqlCommand cmd = new SqlCommand("Select * from Admin where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlCommand cmd = new SqlCommand("Select ActivityStatus,ADID,Name,Age,Gender,YOE,Email from Admin where Name like '%" + txtSearch.Text + "%'", con);
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
                     da.SelectCommand = cmd;
@@ -254,7 +264,7 @@ namespace Project_Final
                 }
                 else if (PositionComb.SelectedItem.ToString() == "Accountant")
                 {
-                    SqlCommand cmd = new SqlCommand("Select * from Accountant where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlCommand cmd = new SqlCommand("Select ActivityStatus,AID,Name,Age,Gender,YOE,Email from Accountant where Name like '%" + txtSearch.Text + "%'", con);
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
                     da.SelectCommand = cmd;
@@ -264,7 +274,7 @@ namespace Project_Final
                 }
                 else if (PositionComb.SelectedItem.ToString() == "Warehouse Manager")
                 {
-                    SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlCommand cmd = new SqlCommand("Select ActivityStatus,WMID,Name,Age,Gender,YOE,Email from WareHouseManager where Name like '%" + txtSearch.Text + "%'", con);
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
                     da.SelectCommand = cmd;
@@ -274,7 +284,7 @@ namespace Project_Final
                 }
                 else if (PositionComb.SelectedItem.ToString() == "Inventory Control Manager")
                 {
-                    SqlCommand cmd = new SqlCommand("Select * from InventoryControlManager where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlCommand cmd = new SqlCommand("Select ActivityStatus,ICMID,Name,Age,Gender,YOE,Email from InventoryControlManager where Name like '%" + txtSearch.Text + "%'", con);
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
                     da.SelectCommand = cmd;
@@ -284,7 +294,7 @@ namespace Project_Final
                 }
                 else if (PositionComb.SelectedItem.ToString() == "Staff Member")
                 {
-                    SqlCommand cmd = new SqlCommand("Select * from Staff where Name like '%" + txtSearch.Text + "%'", con);
+                    SqlCommand cmd = new SqlCommand("Select ActivityStatus,SID,Name,Phone,Email,DailySchedule from Staff where Name like '%" + txtSearch.Text + "%'", con);
                     DataTable dt = new DataTable();
                     dt.Load(cmd.ExecuteReader());
                     dvgUsers.DataSource = dt;

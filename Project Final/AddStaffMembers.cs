@@ -28,6 +28,8 @@ namespace Project_Final
                 lblWMID.Visible = false;
                 txtDS.Visible = true;
                 lblDS.Visible = true;
+                lblRole.Visible = true;
+                cbRole.Visible = true;
             }
             else
             {
@@ -35,8 +37,11 @@ namespace Project_Final
                 lblWMID.Visible = true;
                 txtDS.Visible = false;
                 lblDS.Visible = false;
+                lblRole.Visible = false;
+                cbRole.Visible = false;
             }
         }
+      
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -48,6 +53,8 @@ namespace Project_Final
             txtUserName.Text = "";
             txtEmail.Text = "";
             txtWMID.Text = "";
+            cbRole.Text = "";
+            txtPassWord.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -72,17 +79,21 @@ namespace Project_Final
                 {
                     cmd2.Parameters.AddWithValue("@ADID", Global.CurrentSignInID);
                     cmd2.Parameters.AddWithValue("@WMID", txtWMID.Text);
+                    cmd2.Parameters.AddWithValue("@Role", "");
                 }
                 else if(Global.CurrentLogInType == "WareHouseManager")
                 {
                     cmd2.Parameters.AddWithValue("@ADID", null);
                     cmd2.Parameters.AddWithValue("@WMID", Global.CurrentSignInID);
+                    cmd2.Parameters.AddWithValue("@Role", cbRole.SelectedItem.ToString());                   
                 }
                 cmd2.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd2.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd2.Parameters.AddWithValue("@Phone", Int64.Parse(txtPhone.Text));
                 cmd2.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd2.Parameters.AddWithValue("@DailySchedule", txtDS.Text);
+                cmd2.Parameters.AddWithValue("@SalaryinDollar", 0);
+
 
                 cmd2.ExecuteNonQuery();
 

@@ -66,24 +66,14 @@ namespace Project_Final
 
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
-            string imgloaction = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| jpeg file(*.jpeg)|*jpeg| All Files(*.*)|*.* ";
 
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    imgloaction = dialog.FileName.ToString();
-                    pictureBox16.ImageLocation = imgloaction;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("An error occured");
-            }
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
+    }
 }
