@@ -17,7 +17,7 @@ namespace Project_Final
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         public addProduct()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void Form13_Load(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Project_Final
 
             txtID.Text = "";
             txtColor.Text = "";
-            txtICMID.Text = "";
+            txtName.Text = "";
             txtQuantity.Text = "";
             txtPrice.Text = "";
             txtSize.Text = "";
@@ -82,8 +82,8 @@ namespace Project_Final
 
                 SqlCommand cmd = new SqlCommand("AddProduct", Con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@PID", int.Parse(txtID.Text));
-                cmd.Parameters.AddWithValue("@ICMID", int.Parse(txtICMID.Text));
+                cmd.Parameters.AddWithValue("@PID", int.Parse(txtID.Text));               
+                cmd.Parameters.AddWithValue("@ICMID", Global.CurrentSignInID);
                 cmd.Parameters.AddWithValue("@Size", int.Parse(txtSize.Text));
                 cmd.Parameters.AddWithValue("@Price", int.Parse(txtPrice.Text));
                 cmd.Parameters.AddWithValue("@COLOR", txtColor.Text);
