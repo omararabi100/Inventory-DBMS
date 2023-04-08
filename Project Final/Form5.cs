@@ -181,5 +181,26 @@ namespace Project_Final
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            OrdersForm objform = new OrdersForm();
+            this.Hide();
+            objform.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OrdersForm objform = new OrdersForm();
+            this.Hide();
+            objform.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Request_Products objform = new Request_Products();
+            this.Hide();
+            objform.Show(); 
+        }
     }
 }

@@ -158,6 +158,12 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Request Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request Products.Designer.cs">
+      <DependentUpon>Request Products.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoleAssigned.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Request Products.resx">
+      <DependentUpon>Request Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoleAssigned.resx">
       <DependentUpon>RoleAssigned.cs</DependentUpon>

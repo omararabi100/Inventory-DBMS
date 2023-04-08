@@ -39,7 +39,7 @@ namespace Project_Final
         {
             try
             {
-                SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+               
                 if (Con.State != ConnectionState.Open)
                     Con.Open();
                 SqlCommand cmd = new SqlCommand("AddOrder", Con);
