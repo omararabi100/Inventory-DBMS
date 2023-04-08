@@ -251,5 +251,55 @@ namespace Project_Final
             if (con.State == ConnectionState.Open)
                 con.Close();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                int rowindex = dataGridView2.CurrentCell.RowIndex;
+                dataGridView2.Rows.RemoveAt(rowindex);
+                string sql = "delete from product where PID = " + Pid + "";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+
+
+                MessageBox.Show("Product deleted Successfully");
+
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                int rowindex = dataGridView1.CurrentCell.RowIndex;
+                dataGridView1.Rows.RemoveAt(rowindex);
+                string sql = "delete from product where PID = " + Pid + "";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+
+
+                MessageBox.Show("Product deleted Successfully");
+
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
     }
 }
