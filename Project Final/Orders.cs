@@ -91,9 +91,7 @@ namespace Project_Final
 
         private void btnDash_Click(object sender, EventArgs e)
         {
-            Staff form = new Staff();
-            this.Hide();
-            form.Show();
+           
         }
     }
 }

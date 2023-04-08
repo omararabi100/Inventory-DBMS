@@ -31,16 +31,12 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btmExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtOID = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSpent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -86,27 +82,6 @@
             this.label6.TabIndex = 40;
             this.label6.Text = "ID";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(246, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Discount";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(375, 27);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(160, 24);
-            this.txtDiscount.TabIndex = 37;
-            // 
             // txtOID
             // 
             this.txtOID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 77);
+            this.label2.Location = new System.Drawing.Point(259, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
@@ -142,7 +117,7 @@
             // txtSpent
             // 
             this.txtSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpent.Location = new System.Drawing.Point(375, 73);
+            this.txtSpent.Location = new System.Drawing.Point(388, 28);
             this.txtSpent.Margin = new System.Windows.Forms.Padding(2);
             this.txtSpent.Name = "txtSpent";
             this.txtSpent.Size = new System.Drawing.Size(160, 24);
@@ -169,31 +144,11 @@
             this.txtAID.Size = new System.Drawing.Size(160, 24);
             this.txtAID.TabIndex = 44;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 124);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 20);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "SID";
-            // 
-            // txtSID
-            // 
-            this.txtSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSID.Location = new System.Drawing.Point(69, 120);
-            this.txtSID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSID.Name = "txtSID";
-            this.txtSID.Size = new System.Drawing.Size(160, 24);
-            this.txtSID.TabIndex = 46;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(246, 125);
+            this.label5.Location = new System.Drawing.Point(259, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
@@ -203,7 +158,7 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(375, 120);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(388, 75);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(160, 24);
@@ -247,7 +202,7 @@
             this.RemoveProductBtn.UseVisualStyleBackColor = true;
             this.RemoveProductBtn.Click += new System.EventHandler(this.RemoveProductBtn_Click);
             // 
-            // Form15
+            // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,21 +213,17 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtSID);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btmExit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSpent);
-            this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtOID);
             this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form15";
+            this.Name = "AddOrder";
             this.Text = "Add order";
             this.Load += new System.EventHandler(this.Form15_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -287,16 +238,12 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btmExit;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.TextBox txtOID;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSpent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAID;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.DataGridView dataGridView1;

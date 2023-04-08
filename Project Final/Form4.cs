@@ -10,20 +10,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Project_Final
 {
     public partial class warehousem : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+
         public warehousem()
         {
             InitializeComponent();
             lblUname.Text = Global.CurrentUserName;
+            DataGridViewCheckBoxColumn checkbox = new DataGridViewCheckBoxColumn();
+            checkbox.HeaderText = "Select";
+            checkbox.Width = 25;
+            checkbox.Name = "dvgcb";
+            dvStaff.Columns.Insert(0, checkbox);
         }
 
         private void warehousem_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-            con.Open();
+            if(con.State != ConnectionState.Open)
+             con.Open();
 
             SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where UserName = '" + lblUname.Text.Trim() + "'", con);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -37,10 +45,26 @@ namespace Project_Final
                 lblName.Text = dt.Rows[0][3].ToString();
                 lblEmail.Text = dt.Rows[0][7].ToString();
             }
+            LoadStaffData();
+            if (con.State == ConnectionState.Open)
             con.Close();
         }
 
-            private void button1_Click(object sender, EventArgs e)
+        public void LoadStaffData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvStaff.DataSource = null;
+            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
+            DataTable dt6 = new DataTable();
+            dt6.Clear();
+            dt6.Load(cmd6.ExecuteReader());
+            dvStaff.DataSource = dt6;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Login form = new Login();
             this.Hide();
@@ -73,6 +97,32 @@ namespace Project_Final
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void dvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //clean al rows
+            foreach (DataGridViewRow row in dvStaff.Rows)
+            {
+                row.Cells["dvgcb"].Value = false;
+            }
+
+            //check select row
+            dvStaff.CurrentRow.Cells["dvgcb"].Value = true;
+        }
+
+        private void btnRoleAssign_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dvr in dvStaff.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
+                if (isSelected)                {
+                    RoleAssigned form = new RoleAssigned(dvr.Cells[4].Value.ToString(), int.Parse(dvr.Cells[1].Value.ToString()));
+                    form.ShowDialog();
+                    this.Hide();
+                }
+            }
 
         }
     }
