@@ -57,6 +57,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dvStaff = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnRoleAssign = new System.Windows.Forms.Button();
-            this.dvStaff = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -77,11 +77,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -464,6 +464,15 @@
             this.panel3.TabIndex = 17;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // dvStaff
+            // 
+            this.dvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvStaff.Location = new System.Drawing.Point(195, 12);
+            this.dvStaff.Name = "dvStaff";
+            this.dvStaff.Size = new System.Drawing.Size(726, 227);
+            this.dvStaff.TabIndex = 17;
+            this.dvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvStaff_CellContentClick);
+            // 
             // pictureBox10
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -579,15 +588,7 @@
             this.btnRoleAssign.Text = "Assign Role";
             this.btnRoleAssign.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoleAssign.UseVisualStyleBackColor = false;
-            // 
-            // dvStaff
-            // 
-            this.dvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvStaff.Location = new System.Drawing.Point(195, 12);
-            this.dvStaff.Name = "dvStaff";
-            this.dvStaff.Size = new System.Drawing.Size(726, 227);
-            this.dvStaff.TabIndex = 17;
-            this.dvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvStaff_CellContentClick);
+            this.btnRoleAssign.Click += new System.EventHandler(this.btnRoleAssign_Click);
             // 
             // warehousem
             // 
@@ -616,11 +617,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).EndInit();
             this.ResumeLayout(false);
 
         }

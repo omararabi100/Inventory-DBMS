@@ -98,5 +98,18 @@ namespace Project_Final
         {
 
         }
+
+        private void btnRoleAssign_Click(object sender, EventArgs e)
+        {
+            if (dvStaff.SelectedRows.Count > 0)
+            {
+                RoleAssigned form = new RoleAssigned(dvStaff.SelectedCells[5].Value.ToString(), int.Parse(dvStaff.SelectedCells[1].Value.ToString()));
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Staff Member");
+            }
+
+        }
     }
 }
