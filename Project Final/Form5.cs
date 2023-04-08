@@ -6,9 +6,11 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_Final
 {
@@ -38,6 +40,24 @@ namespace Project_Final
                 lblEmail.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                SqlCommand cmdd = new SqlCommand("Select * from Product", con);
+                DataTable dtt = new DataTable();
+                dtt.Load(cmdd.ExecuteReader());
+                dataGridView1.DataSource = dtt;
+
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Error occured...");
+            }
+            if (con.State != ConnectionState.Closed)
+                con.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,10 +140,44 @@ namespace Project_Final
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+          
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("countproducts", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@RowCount", SqlDbType.Int).Direction =ParameterDirection.Output;
+                SqlDataReader reader;
+
+                reader = cmd.ExecuteReader();
+
+                reader.Close();
+
+                label2.Text = cmd.Parameters["@RowCount"].Value.ToString();
+
+
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
