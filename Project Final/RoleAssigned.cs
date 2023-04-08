@@ -37,5 +37,31 @@ namespace Project_Final
         {
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(con.State != ConnectionState.Open)
+                    con.Open();
+                SqlCommand cmd = new SqlCommand("AssignRole", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@SID", TempSID);
+                cmd.Parameters.AddWithValue("@Role",cbRoll.SelectedItem.ToString());
+                cmd.ExecuteNonQuery();            
+            }
+            catch(Exception xe)
+            {
+                MessageBox.Show("Error!!!");
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            warehousem form = new warehousem();
+            this.Close();
+            //form.LoadStaffData();
+            form.Show();
+        }
     }
 }
