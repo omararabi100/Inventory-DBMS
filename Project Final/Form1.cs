@@ -14,14 +14,14 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project_Final
 {
-    public partial class Login : Form
+    public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
         private Rectangle buttonoriginalrectangle;
         private Rectangle originalFormsize;
         private readonly SqlConnection connection;
 
-        public Login()
+        public Form1()
         {
             InitializeComponent();
         }

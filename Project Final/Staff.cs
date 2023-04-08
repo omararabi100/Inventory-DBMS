@@ -42,7 +42,7 @@ namespace Project_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login form = new Login();
+            Form1 form = new Form1();
             this.Hide();
             form.Show();
         }
