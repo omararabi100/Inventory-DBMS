@@ -108,15 +108,12 @@ C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\bin\Debug\Project Final
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.AssemblyReference.cache
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.SuggestedBindingRedirects.cache
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form1.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form10.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form11.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form12.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.accountant.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.admin.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.warehousem.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ICmanager.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Staff.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form8.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Menuform.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
@@ -127,8 +124,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final
 C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.addProduct.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Selected_Items.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
-C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Selected_Items.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\bin\Debug\Database1.mdf
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\bin\Debug\Database1_log.ldf
 C:\Users\wally\Source\Repos\Inventory-DBMS2\Project Final\bin\Debug\Project Final.exe.config
@@ -212,3 +207,8 @@ C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.exe
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.pdb
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.DialogBox.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.DailyIncome.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Customers.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Request_Products.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.RoleAssigned.resources
+C:\Users\aboub\Source\Repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Products.resources

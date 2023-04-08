@@ -25,19 +25,44 @@ namespace Project_Final
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select * from Staff where UserName = '" + lblUname.Text.Trim() + "'", con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            if (dt.Rows.Count > 0)
+            try
             {
-                Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
-                Global.CurrentName = dt.Rows[0][5].ToString();
-                lblName.Text = dt.Rows[0][5].ToString();
-                lblUname.Text = dt.Rows[0][4].ToString();
-                lblEmail.Text = dt.Rows[0][7].ToString();
+                SqlCommand cmd = new SqlCommand("Select * from Staff where UserName = '" + lblUname.Text.Trim() + "'", con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
+                    Global.CurrentName = dt.Rows[0][5].ToString();
+                    lblName.Text = dt.Rows[0][5].ToString();
+                    lblUname.Text = dt.Rows[0][4].ToString();
+                    lblEmail.Text = dt.Rows[0][7].ToString();
+                }
+
+                SqlCommand cmd2 = new SqlCommand("Select * from Customer", con);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd2);
+                DataTable dt2 = new DataTable();
+                apt.Fill(dt2);
+
+                Customerdvg.DataSource = dt2;
+
+                SqlCommand cmd3 = new SqlCommand("Select * from Ordered", con);
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd3);
+                DataTable dt3 = new DataTable();
+                adpt.Fill(dt3);
+
+                Orderdvg.DataSource = dt3;
+
+            }
+            catch
+            {
+                MessageBox.Show("Error");
             }
             con.Close();
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +101,11 @@ namespace Project_Final
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
