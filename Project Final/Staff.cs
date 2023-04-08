@@ -32,9 +32,10 @@ namespace Project_Final
             if (dt.Rows.Count > 0)
             {
                 Global.CurrentSignInID = int.Parse(dt.Rows[0][1].ToString());
-                Global.CurrentName = dt.Rows[0][4].ToString();
-                lblName.Text = dt.Rows[0][4].ToString();
-                lblEmail.Text = dt.Rows[0][6].ToString();
+                Global.CurrentName = dt.Rows[0][5].ToString();
+                lblName.Text = dt.Rows[0][5].ToString();
+                lblUname.Text = dt.Rows[0][4].ToString();
+                lblEmail.Text = dt.Rows[0][7].ToString();
             }
             con.Close();
         }
@@ -70,6 +71,11 @@ namespace Project_Final
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

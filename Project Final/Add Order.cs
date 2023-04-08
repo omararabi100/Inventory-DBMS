@@ -46,9 +46,8 @@ namespace Project_Final
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@OID", int.Parse(txtOID.Text));
                 cmd.Parameters.AddWithValue("@AID", int.Parse(txtAID.Text));
-                cmd.Parameters.AddWithValue("@SID", int.Parse(txtSID.Text));
+                cmd.Parameters.AddWithValue("@SID", Global.CurrentSignInID);
                 cmd.Parameters.AddWithValue("@PhoneNumber", Int64.Parse(txtPhoneNumber.Text));
-                cmd.Parameters.AddWithValue("@Discount", double.Parse(txtDiscount.Text));
                 cmd.Parameters.AddWithValue("@AmmountSpent", double.Parse(txtSpent.Text));
                 cmd.ExecuteNonQuery();
 
@@ -137,10 +136,8 @@ namespace Project_Final
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtAID.Text = "";
-            txtDiscount.Text = "";
             txtOID.Text = "";
             txtPhoneNumber.Text = "";
-            txtSID.Text = "";
             txtSpent.Text = "";
             dts.Clear();
             dataGridView2.DataSource=dts;

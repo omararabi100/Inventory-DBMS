@@ -159,7 +159,7 @@ namespace Project_Final
                         objform5.Show();
                     }
 
-                    else if (dbt.Rows[0][3].ToString()=="Staff")
+                    else if (dbt.Rows[0][2].ToString()=="Staff")
                     {
                         Global.CurrentUserName = dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "Staff";
