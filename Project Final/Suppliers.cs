@@ -48,11 +48,6 @@ namespace Project_Final
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-            id = Convert.ToInt32(row.Cells[0].Value);
-        }
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
@@ -101,6 +96,12 @@ namespace Project_Final
             }
             if (con.State == ConnectionState.Open)
                 con.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+            id = Convert.ToInt32(row.Cells[0].Value);
         }
     }
     

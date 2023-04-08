@@ -40,6 +40,11 @@ namespace Project_Final
             {
                 MessageBox.Show("something went wrong!!!");
             }
+            Customers customers = new Customers();
+            this.Hide();
+
+            customers.LoadData();
+            customers.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,6 +61,11 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Customers customers = new Customers();
+            this.Hide();
+
+            customers.LoadData();
+            customers.Show();
 
         }
     }

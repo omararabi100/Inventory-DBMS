@@ -42,7 +42,7 @@ namespace Project_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Login form = new Login();
             this.Hide();
             form.Show();
         }
@@ -90,7 +90,7 @@ namespace Project_Final
         private void button11_Click(object sender, EventArgs e)
         {
             
-            Form8 objform = new Form8();
+            Products objform = new Products();
             this.Hide();
             objform.Show();
             
@@ -105,7 +105,7 @@ namespace Project_Final
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form8 objform = new Form8();
+            Products objform = new Products();
             this.Hide();
             objform.Show();
 

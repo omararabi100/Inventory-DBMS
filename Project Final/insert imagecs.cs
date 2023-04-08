@@ -137,7 +137,7 @@ namespace Project_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form8 form = new Form8();
+            Products form = new Products();
             this.Close();
             form.Show();
 
