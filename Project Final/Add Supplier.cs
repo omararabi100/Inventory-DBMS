@@ -46,6 +46,11 @@ namespace Project_Final
             {
                 MessageBox.Show("Error");
             }
+            Suppliers form = new Suppliers();
+            this.Close();
+
+            form.LoadData();
+            form.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
