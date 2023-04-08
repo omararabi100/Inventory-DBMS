@@ -184,7 +184,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Form1.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Form10.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Customers.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Form12.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.addProduct.resources
@@ -200,15 +199,13 @@ C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Staff.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Products.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.OrdersForm.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Menuform.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.RemoveOrder.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Suppliers.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.ModifyUser.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Selected_Items.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.csproj.CoreCompileInputs.cache
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.exe
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project Final.pdb
-C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.DialogBox.resources
+C:\Users\wally\source\repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.DailyRecords.resources

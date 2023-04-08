@@ -35,7 +35,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnDI = new System.Windows.Forms.Button();
             this.btnSalary = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.button16 = new System.Windows.Forms.Button();
@@ -47,13 +49,27 @@
             this.lblName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PositionComb = new System.Windows.Forms.ComboBox();
+            this.dvRecord = new System.Windows.Forms.DataGridView();
+            this.dvExpense = new System.Windows.Forms.DataGridView();
+            this.dvIncome = new System.Windows.Forms.DataGridView();
+            this.dvSalary = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvRecord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvExpense)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvIncome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSalary)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,26 +149,60 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.pictureBox10);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.btnDI);
             this.panel2.Controls.Add(this.btnSalary);
-            this.panel2.Location = new System.Drawing.Point(148, 419);
+            this.panel2.Location = new System.Drawing.Point(148, 533);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(933, 190);
+            this.panel2.Size = new System.Drawing.Size(933, 76);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pictureBox10
+            // pictureBox4
             // 
-            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(474, 67);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(760, 8);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(227, 8);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnDI
+            // 
+            this.btnDI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDI.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnDI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDI.FlatAppearance.BorderSize = 0;
+            this.btnDI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDI.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnDI.Location = new System.Drawing.Point(94, 8);
+            this.btnDI.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDI.Name = "btnDI";
+            this.btnDI.Size = new System.Drawing.Size(183, 60);
+            this.btnDI.TabIndex = 13;
+            this.btnDI.Text = "Daily Records";
+            this.btnDI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDI.UseVisualStyleBackColor = false;
+            this.btnDI.Click += new System.EventHandler(this.btnDI_Click);
             // 
             // btnSalary
             // 
@@ -164,7 +214,7 @@
             this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnSalary.Location = new System.Drawing.Point(341, 67);
+            this.btnSalary.Location = new System.Drawing.Point(627, 8);
             this.btnSalary.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(183, 60);
@@ -286,12 +336,96 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.dvSalary);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.txtSearch);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.PositionComb);
+            this.panel4.Controls.Add(this.dvRecord);
+            this.panel4.Controls.Add(this.dvExpense);
+            this.panel4.Controls.Add(this.dvIncome);
             this.panel4.Location = new System.Drawing.Point(151, 166);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(931, 241);
+            this.panel4.Size = new System.Drawing.Size(931, 363);
             this.panel4.TabIndex = 9;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Select Position:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(7, 57);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(165, 20);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Seach By Name:";
+            // 
+            // PositionComb
+            // 
+            this.PositionComb.FormattingEnabled = true;
+            this.PositionComb.Items.AddRange(new object[] {
+            "Administrator",
+            "Warehouse Manager",
+            "Inventory Control Manager",
+            "Accountant",
+            "Staff Member"});
+            this.PositionComb.Location = new System.Drawing.Point(7, 171);
+            this.PositionComb.Name = "PositionComb";
+            this.PositionComb.Size = new System.Drawing.Size(165, 21);
+            this.PositionComb.TabIndex = 4;
+            this.PositionComb.SelectedIndexChanged += new System.EventHandler(this.PositionComb_SelectedIndexChanged);
+            // 
+            // dvRecord
+            // 
+            this.dvRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvRecord.Location = new System.Drawing.Point(670, 18);
+            this.dvRecord.Name = "dvRecord";
+            this.dvRecord.Size = new System.Drawing.Size(240, 327);
+            this.dvRecord.TabIndex = 2;
+            // 
+            // dvExpense
+            // 
+            this.dvExpense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvExpense.Location = new System.Drawing.Point(424, 181);
+            this.dvExpense.Name = "dvExpense";
+            this.dvExpense.Size = new System.Drawing.Size(240, 164);
+            this.dvExpense.TabIndex = 1;
+            // 
+            // dvIncome
+            // 
+            this.dvIncome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvIncome.Location = new System.Drawing.Point(424, 18);
+            this.dvIncome.Name = "dvIncome";
+            this.dvIncome.Size = new System.Drawing.Size(240, 157);
+            this.dvIncome.TabIndex = 0;
+            // 
+            // dvSalary
+            // 
+            this.dvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvSalary.Location = new System.Drawing.Point(178, 18);
+            this.dvSalary.Name = "dvSalary";
+            this.dvSalary.Size = new System.Drawing.Size(240, 327);
+            this.dvSalary.TabIndex = 8;
+            this.dvSalary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvSalary_CellContentClick_1);
             // 
             // accountant
             // 
@@ -310,10 +444,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvRecord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvExpense)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvIncome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSalary)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,7 +477,17 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUname;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnSalary;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnDI;
+        private System.Windows.Forms.DataGridView dvExpense;
+        private System.Windows.Forms.DataGridView dvIncome;
+        private System.Windows.Forms.DataGridView dvRecord;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox PositionComb;
+        private System.Windows.Forms.DataGridView dvSalary;
     }
 }

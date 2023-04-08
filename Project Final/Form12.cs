@@ -214,5 +214,10 @@ namespace Project_Final
             form.Show();
 
         }
+
+        private void txtDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

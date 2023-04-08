@@ -110,9 +110,7 @@ namespace Project_Final
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            insert_imagecs newForm = new insert_imagecs();
-            newForm.Show();
-            this.Hide();
+
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)

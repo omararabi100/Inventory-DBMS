@@ -77,17 +77,11 @@
     <Compile Include="AddStaffMembers.Designer.cs">
       <DependentUpon>AddStaffMembers.cs</DependentUpon>
     </Compile>
-    <Compile Include="DailyExpenses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DailyExpenses.Designer.cs">
-      <DependentUpon>DailyExpenses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DailyIncome.cs">
+    <Compile Include="DailyRecords.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DailyIncome.Designer.cs">
-      <DependentUpon>DailyIncome.cs</DependentUpon>
+      <DependentUpon>DailyRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -236,7 +230,7 @@
       <DependentUpon>AddStaffMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DailyIncome.resx">
-      <DependentUpon>DailyIncome.cs</DependentUpon>
+      <DependentUpon>DailyRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
