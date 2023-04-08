@@ -110,7 +110,9 @@ namespace Project_Final
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
+            Products form = new Products();
+            this.Close();
+            form.Show();
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)

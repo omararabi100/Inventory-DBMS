@@ -47,7 +47,7 @@
             this.iMGSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet2 = new Project_Final.Database1DataSet2();
             this.iMGSTableAdapter = new Project_Final.Database1DataSet2TableAdapters.IMGSTableAdapter();
-            this.btnNext = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -215,17 +215,17 @@
             // 
             this.iMGSTableAdapter.ClearBeforeFill = true;
             // 
-            // btnNext
+            // btnExit
             // 
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(11, 214);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(69, 26);
-            this.btnNext.TabIndex = 24;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(11, 214);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(69, 26);
+            this.btnExit.TabIndex = 24;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // label7
             // 
@@ -276,7 +276,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -322,7 +322,7 @@
         private Database1DataSet2 database1DataSet2;
         private System.Windows.Forms.BindingSource iMGSBindingSource;
         private Database1DataSet2TableAdapters.IMGSTableAdapter iMGSTableAdapter;
-        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtName;

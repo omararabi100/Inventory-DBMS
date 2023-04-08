@@ -46,38 +46,6 @@ namespace Project_Final
             }
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
-                if (con.State != ConnectionState.Open)
-                    con.Open();
-                SqlCommand cmd = new SqlCommand("RemoveOrder", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                foreach (DataGridViewRow dvr in dvgOrder.Rows)
-                {
-                    bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
-                    if (isSelected)
-                    {
-                        if (dvr.Cells[0].Value != null)
-                        {
-                            cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@OID", int.Parse(dvr.Cells[1].Value.ToString()));
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                }
-                LoadOrderData();
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
-            catch (Exception msj)
-            {
-                MessageBox.Show("Error!");
-            }
-        }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
@@ -113,6 +81,38 @@ namespace Project_Final
             this.Close();
             form.LoadOrderData();
             form.Show();
+        }
+
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                SqlCommand cmd = new SqlCommand("RemoveOrder", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (DataGridViewRow dvr in dvgOrder.Rows)
+                {
+                    bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
+                    if (isSelected)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@OID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                LoadOrderData();
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+            catch (Exception msj)
+            {
+                MessageBox.Show("Error!");
+            }
         }
     }
 }
