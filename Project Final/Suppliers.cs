@@ -14,10 +14,14 @@ namespace Project_Final
     public partial class Suppliers : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        int id;
         public Suppliers()
         {
             InitializeComponent();
+            DataGridViewCheckBoxColumn checkbox = new DataGridViewCheckBoxColumn();
+            checkbox.HeaderText = "Select";
+            checkbox.Width = 25;
+            checkbox.Name = "dvgcb";
+            dvSupp.Columns.Insert(0, checkbox);
         }
 
        public void LoadData()
@@ -29,7 +33,7 @@ namespace Project_Final
                 SqlDataAdapter adapter = new SqlDataAdapter("Select * from Supplier", con);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dvSupp.DataSource = dt;
 
 
             }
@@ -56,23 +60,33 @@ namespace Project_Final
 
         private void button10_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(rowIndex);
-            if (con.State != ConnectionState.Open)
-                con.Open();
             try
             {
-                
-                SqlCommand cmd = new SqlCommand("Delete from Supplier where SPID =' " + id + "'", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Deleted Successfully!");
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                SqlCommand cmd = new SqlCommand("RemoveSupp", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (DataGridViewRow dvr in dvSupp.Rows)
+                {
+                    bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
+                    if (isSelected)
+                    {
+                        if (dvr.Cells[0].Value != null)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@SPID", int.Parse(dvr.Cells[1].Value.ToString()));
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
                 LoadData();
+                if (con.State == ConnectionState.Open)
+                    con.Close();
             }
-            catch { 
-            MessageBox.Show("Error");
+            catch (Exception msj)
+            {
+                MessageBox.Show("Error!");
             }
-            if (con.State != ConnectionState.Closed)
-                con.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -87,7 +101,7 @@ namespace Project_Final
                 da.SelectCommand = cmd;
                 dt.Clear();
                 da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dvSupp.DataSource = dt;
             }
 
             catch
@@ -98,10 +112,21 @@ namespace Project_Final
                 con.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dvSupp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-            id = Convert.ToInt32(row.Cells[0].Value);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ICmanager form = new ICmanager();
+            this.Close();
+            form.Show();
+        }
+
+        private void dvSupp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

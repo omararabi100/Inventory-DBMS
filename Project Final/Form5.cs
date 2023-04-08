@@ -162,11 +162,6 @@ namespace Project_Final
                 reader = cmd.ExecuteReader();
 
                 reader.Close();
-
-                label2.Text = cmd.Parameters["@RowCount"].Value.ToString();
-
-
-
             }
 
             catch
@@ -199,8 +194,16 @@ namespace Project_Final
         private void button2_Click_1(object sender, EventArgs e)
         {
             Request_Products objform = new Request_Products();
+            objform.ShowDialog();
             this.Hide();
-            objform.Show(); 
+            
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Suppliers form = new Suppliers();
+            this.Close();
+            form.Show();
         }
     }
 }

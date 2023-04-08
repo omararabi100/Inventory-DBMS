@@ -75,7 +75,7 @@
             this.button1.Size = new System.Drawing.Size(69, 72);
             this.button1.TabIndex = 27;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pictureBox9
             // 
@@ -145,12 +145,12 @@
             // dvgOrder
             // 
             this.dvgOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgOrder.Location = new System.Drawing.Point(148, 63);
+            this.dvgOrder.Location = new System.Drawing.Point(148, 11);
             this.dvgOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dvgOrder.Name = "dvgOrder";
             this.dvgOrder.RowHeadersWidth = 51;
             this.dvgOrder.RowTemplate.Height = 24;
-            this.dvgOrder.Size = new System.Drawing.Size(934, 404);
+            this.dvgOrder.Size = new System.Drawing.Size(934, 456);
             this.dvgOrder.TabIndex = 6;
             this.dvgOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

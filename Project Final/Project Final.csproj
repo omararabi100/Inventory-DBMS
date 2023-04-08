@@ -77,6 +77,18 @@
     <Compile Include="AddStaffMembers.Designer.cs">
       <DependentUpon>AddStaffMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailyExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyExpenses.Designer.cs">
+      <DependentUpon>DailyExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyIncome.Designer.cs">
+      <DependentUpon>DailyIncome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,12 +109,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
@@ -196,12 +202,6 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="globals.cs" />
-    <Compile Include="insert imagecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="insert imagecs.Designer.cs">
-      <DependentUpon>insert imagecs.cs</DependentUpon>
-    </Compile>
     <Compile Include="MemoryStream.cs" />
     <Compile Include="Menuform.cs">
       <SubType>Form</SubType>
@@ -229,23 +229,17 @@
     <Compile Include="UpdateUser.Designer.cs">
       <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Selected Items.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Selected Items.Designer.cs">
-      <DependentUpon>Selected Items.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStaffMembers.resx">
       <DependentUpon>AddStaffMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DailyIncome.resx">
+      <DependentUpon>DailyIncome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
@@ -292,9 +286,6 @@
     <EmbeddedResource Include="Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="insert imagecs.resx">
-      <DependentUpon>insert imagecs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menuform.resx">
       <DependentUpon>Menuform.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,9 +307,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateUser.resx">
       <DependentUpon>UpdateUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Selected Items.resx">
-      <DependentUpon>Selected Items.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>

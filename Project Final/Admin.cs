@@ -187,8 +187,6 @@ namespace Project_Final
                 con.Open();
             try
             {
-                
-
                     SqlCommand cmd = new SqlCommand("Select * from Admin where Name like '%" + txtSearch.Text + "%'", con);
                     SqlDataAdapter da = new SqlDataAdapter();
                     DataTable dt = new DataTable();
