@@ -92,7 +92,10 @@ namespace Project_Final
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+            Customers customers = new Customers();
+            this.Hide();
 
+            customers.Show();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -108,6 +111,14 @@ namespace Project_Final
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Staff staff = new Staff();
+            this.Hide();
+
+            staff.Show();
         }
     }
 }
