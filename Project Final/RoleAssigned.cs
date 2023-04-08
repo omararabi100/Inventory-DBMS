@@ -58,10 +58,9 @@ namespace Project_Final
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            warehousem form = new warehousem();
-            this.Close();
-            //form.LoadStaffData();
-            form.Show();
+                warehousem form = new warehousem();
+                this.Close();
+                form.Show();
         }
     }
 }

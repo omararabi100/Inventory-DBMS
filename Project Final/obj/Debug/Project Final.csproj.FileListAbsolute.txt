@@ -171,40 +171,6 @@ C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Salary.resources
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Suppliers.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\bin\Debug\Database1.mdf
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\bin\Debug\Database1_log.ldf
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\bin\Debug\Project Final.exe.config
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\bin\Debug\Project Final.exe
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\bin\Debug\Project Final.pdb
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.AssemblyReference.cache
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.SuggestedBindingRedirects.cache
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddStaffMembers.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form1.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form10.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form11.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form12.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.addProduct.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddCustomer.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.AddOrder.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.accountant.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.admin.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.warehousem.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ICmanager.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.RoleAssigned.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Salary.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Staff.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Form8.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.OrdersForm.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.insert_imagecs.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Menuform.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.RemoveOrder.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Suppliers.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.ModifyUser.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Selected_Items.resources
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.GenerateResource.cache
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.exe
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project Final.pdb
-C:\Users\User\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Request_Products.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.RoleAssigned.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Suppliers.resources
