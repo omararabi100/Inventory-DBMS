@@ -9,7 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace Project_Final
 {
@@ -21,6 +21,11 @@ namespace Project_Final
         {
             InitializeComponent();
             lblUname.Text = Global.CurrentUserName;
+            DataGridViewCheckBoxColumn checkbox = new DataGridViewCheckBoxColumn();
+            checkbox.HeaderText = "Select";
+            checkbox.Width = 25;
+            checkbox.Name = "dvgcb";
+            dvStaff.Columns.Insert(0, checkbox);
         }
 
         private void warehousem_Load(object sender, EventArgs e)
@@ -40,7 +45,8 @@ namespace Project_Final
                 lblName.Text = dt.Rows[0][3].ToString();
                 lblEmail.Text = dt.Rows[0][7].ToString();
             }
-            if(con.State == ConnectionState.Open)
+            LoadStaffData();
+            if (con.State == ConnectionState.Open)
             con.Close();
         }
 
@@ -96,18 +102,26 @@ namespace Project_Final
 
         private void dvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //clean al rows
+            foreach (DataGridViewRow row in dvStaff.Rows)
+            {
+                row.Cells["dvgcb"].Value = false;
+            }
 
+            //check select row
+            dvStaff.CurrentRow.Cells["dvgcb"].Value = true;
         }
 
         private void btnRoleAssign_Click(object sender, EventArgs e)
         {
-            if (dvStaff.SelectedRows.Count > 0)
+            foreach (DataGridViewRow dvr in dvStaff.Rows)
             {
-                RoleAssigned form = new RoleAssigned(dvStaff.SelectedCells[5].Value.ToString(), int.Parse(dvStaff.SelectedCells[1].Value.ToString()));
-            }
-            else
-            {
-                MessageBox.Show("Please Select a Staff Member");
+                bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
+                if (isSelected)                {
+                    RoleAssigned form = new RoleAssigned(dvr.Cells[4].Value.ToString(), int.Parse(dvr.Cells[1].Value.ToString()));
+                    form.ShowDialog();
+                    this.Hide();
+                }
             }
 
         }

@@ -61,8 +61,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnRoleAssign = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -80,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -479,7 +476,7 @@
             this.pictureBox10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(125, 63);
+            this.pictureBox10.Location = new System.Drawing.Point(315, 63);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(50, 60);
@@ -498,7 +495,7 @@
             this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStaff.Location = new System.Drawing.Point(5, 63);
+            this.btnAddStaff.Location = new System.Drawing.Point(195, 63);
             this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(170, 60);
@@ -510,8 +507,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.pictureBox11);
-            this.panel4.Controls.Add(this.button10);
             this.panel4.Controls.Add(this.pictureBox8);
             this.panel4.Controls.Add(this.btnRoleAssign);
             this.panel4.Controls.Add(this.pictureBox10);
@@ -523,46 +518,13 @@
             this.panel4.TabIndex = 31;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(748, 63);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 29;
-            this.pictureBox11.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(628, 63);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(170, 60);
-            this.button10.TabIndex = 28;
-            this.button10.Text = "Add Staff";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(452, 63);
+            this.pictureBox8.Location = new System.Drawing.Point(732, 63);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 60);
@@ -580,7 +542,7 @@
             this.btnRoleAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoleAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoleAssign.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRoleAssign.Location = new System.Drawing.Point(332, 63);
+            this.btnRoleAssign.Location = new System.Drawing.Point(612, 63);
             this.btnRoleAssign.Margin = new System.Windows.Forms.Padding(2);
             this.btnRoleAssign.Name = "btnRoleAssign";
             this.btnRoleAssign.Size = new System.Drawing.Size(170, 60);
@@ -620,7 +582,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
@@ -659,8 +620,6 @@
         private System.Windows.Forms.Label lblUname;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnRoleAssign;
         private System.Windows.Forms.DataGridView dvStaff;

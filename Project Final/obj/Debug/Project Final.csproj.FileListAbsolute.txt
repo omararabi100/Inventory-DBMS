@@ -171,3 +171,6 @@ C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Fina
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Salary.resources
 C:\Users\aboub\source\repos\Inventory-DBMS\Project Final\obj\Debug\Project_Final.Suppliers.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Add_Supplier.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.RoleAssigned.resources
+C:\Users\wally\source\repos\Inventory-DBMS2\Project Final\obj\Debug\Project_Final.Suppliers.resources
