@@ -41,8 +41,6 @@
             this.txtSize = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtICMID = new System.Windows.Forms.TextBox();
             this.database1DataSet1 = new Project_Final.Database1DataSet1();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new Project_Final.Database1DataSet1TableAdapters.ProductTableAdapter();
@@ -189,23 +187,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "ICMID";
-            // 
-            // txtICMID
-            // 
-            this.txtICMID.Location = new System.Drawing.Point(86, 103);
-            this.txtICMID.Name = "txtICMID";
-            this.txtICMID.Size = new System.Drawing.Size(169, 20);
-            this.txtICMID.TabIndex = 23;
-            // 
             // database1DataSet1
             // 
             this.database1DataSet1.DataSetName = "Database1DataSet1";
@@ -250,7 +231,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(294, 155);
+            this.label7.Location = new System.Drawing.Point(4, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 20);
             this.label7.TabIndex = 25;
@@ -259,7 +240,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(367, 151);
+            this.txtQuantity.Location = new System.Drawing.Point(86, 151);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(169, 24);
@@ -269,7 +250,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(86, 151);
+            this.txtName.Location = new System.Drawing.Point(86, 104);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(169, 24);
@@ -280,7 +261,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 151);
+            this.label8.Location = new System.Drawing.Point(4, 108);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 28;
@@ -296,8 +277,6 @@
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.txtICMID);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -337,8 +316,6 @@
         private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtICMID;
         private Database1DataSet1 database1DataSet1;
         private System.Windows.Forms.BindingSource productBindingSource;
         private Database1DataSet1TableAdapters.ProductTableAdapter productTableAdapter;

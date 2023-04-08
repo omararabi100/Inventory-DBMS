@@ -9,11 +9,14 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_Final
 {
     public partial class warehousem : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+
         public warehousem()
         {
             InitializeComponent();
@@ -22,8 +25,8 @@ namespace Project_Final
 
         private void warehousem_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-            con.Open();
+            if(con.State != ConnectionState.Open)
+             con.Open();
 
             SqlCommand cmd = new SqlCommand("Select * from WareHouseManager where UserName = '" + lblUname.Text.Trim() + "'", con);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -37,10 +40,25 @@ namespace Project_Final
                 lblName.Text = dt.Rows[0][3].ToString();
                 lblEmail.Text = dt.Rows[0][7].ToString();
             }
+            if(con.State == ConnectionState.Open)
             con.Close();
         }
 
-            private void button1_Click(object sender, EventArgs e)
+        public void LoadStaffData()
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            dvStaff.DataSource = null;
+            SqlCommand cmd6 = new SqlCommand("ShowStaff", con);
+            DataTable dt6 = new DataTable();
+            dt6.Clear();
+            dt6.Load(cmd6.ExecuteReader());
+            dvStaff.DataSource = dt6;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
             this.Hide();
@@ -73,6 +91,24 @@ namespace Project_Final
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void dvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRoleAssign_Click(object sender, EventArgs e)
+        {
+            if (dvStaff.SelectedRows.Count > 0)
+            {
+                RoleAssigned form = new RoleAssigned(dvStaff.SelectedCells[5].Value.ToString(), int.Parse(dvStaff.SelectedCells[1].Value.ToString()));
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Staff Member");
+            }
 
         }
     }

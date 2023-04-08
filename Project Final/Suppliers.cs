@@ -71,6 +71,7 @@ namespace Project_Final
                 SqlCommand cmd = new SqlCommand("Delete from Supplier where SPID =' " + id + "'", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Deleted Successfully!");
+                LoadData();
             }
             catch { 
             MessageBox.Show("Error");

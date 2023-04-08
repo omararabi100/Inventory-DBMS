@@ -13,6 +13,6 @@ namespace Project_Final
         public static string CurrentName;
         public static string CurrentEmail;
         public static string CurrentLogInType;
-
+        public static int CurrentSalary;
     }
 }
