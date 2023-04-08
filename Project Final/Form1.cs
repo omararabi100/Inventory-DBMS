@@ -14,7 +14,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project_Final
 {
-    public partial class Form1 : Form
+    public partial class Form1 :Form
     {
         SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ToString());
         private Rectangle buttonoriginalrectangle;
@@ -24,7 +24,10 @@ namespace Project_Final
         public Form1()
         {
             InitializeComponent();
+           
         }
+
+    
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -123,7 +126,7 @@ namespace Project_Final
                 if (dbt.Rows.Count > 0)
                 {
                     
-                    if (dbt.Rows[0][2].ToString() == "Accountant")
+                    if (dbt.Rows[0][2].ToString() == "Accountant" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false)==0)
                     {
                         Global.CurrentUserName = dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "Accountant";
@@ -132,7 +135,7 @@ namespace Project_Final
                         objform2.Show();
                     }
 
-                    else if (dbt.Rows[0][2].ToString()== "Admin")
+                    else if (dbt.Rows[0][2].ToString()== "Admin" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
                     {
                         Global.CurrentUserName= dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "Admin";
@@ -141,7 +144,7 @@ namespace Project_Final
                         objform3.Show();
                     }
 
-                    else if (dbt.Rows[0][2].ToString()== "WareHouseManager")
+                    else if (dbt.Rows[0][2].ToString()== "WareHouseManager" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
                     {
                         Global.CurrentUserName = dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "WareHouseManager";
@@ -150,7 +153,7 @@ namespace Project_Final
                         objform4.Show();
                     }
 
-                    else if (dbt.Rows[0][2].ToString()== "InventoryControlManager")
+                    else if (dbt.Rows[0][2].ToString()== "InventoryControlManager" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
                     {
                         Global.CurrentUserName = dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "InventoryControlManager";
@@ -159,13 +162,18 @@ namespace Project_Final
                         objform5.Show();
                     }
 
-                    else if (dbt.Rows[0][2].ToString()=="Staff")
+                    else if (dbt.Rows[0][2].ToString() == "Staff" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
                     {
                         Global.CurrentUserName = dbt.Rows[0][0].ToString();
                         Global.CurrentLogInType = "Staff";
                         Staff objform6 = new Staff();
                         this.Hide();
                         objform6.Show();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Incorrect Password or Username");
                     }
 
                 }
@@ -181,6 +189,93 @@ namespace Project_Final
             }
             con.Close();
         }
+
+        protected override bool ProcessCmdKey(ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Enter:
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+
+                    SqlCommand cmd = new SqlCommand("Select * from Login where UserName = '" + txtUname.Text.Trim() + "' and Password = '" + txtpass.Text.Trim() + "'", con);
+                    con.Open();
+                    try
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dbt = new DataTable();
+                        adapter.Fill(dbt);
+                        if (dbt.Rows.Count > 0)
+                        {
+
+                            if (dbt.Rows[0][2].ToString() == "Accountant" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
+                            {
+                                Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                                Global.CurrentLogInType = "Accountant";
+                                accountant objform2 = new accountant();
+                                this.Hide();
+                                objform2.Show();
+                            }
+
+                            else if (dbt.Rows[0][2].ToString() == "Admin" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
+                            {
+                                Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                                Global.CurrentLogInType = "Admin";
+                                admin objform3 = new admin();
+                                this.Hide();
+                                objform3.Show();
+                            }
+
+                            else if (dbt.Rows[0][2].ToString() == "WareHouseManager" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
+                            {
+                                Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                                Global.CurrentLogInType = "WareHouseManager";
+                                warehousem objform4 = new warehousem();
+                                this.Hide();
+                                objform4.Show();
+                            }
+
+                            else if (dbt.Rows[0][2].ToString() == "InventoryControlManager" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
+                            {
+                                Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                                Global.CurrentLogInType = "InventoryControlManager";
+                                ICmanager objform5 = new ICmanager();
+                                this.Hide();
+                                objform5.Show();
+                            }
+
+                            else if (dbt.Rows[0][2].ToString() == "Staff" && String.Compare(txtpass.Text, dbt.Rows[0][1].ToString(), false) == 0)
+                            {
+                                Global.CurrentUserName = dbt.Rows[0][0].ToString();
+                                Global.CurrentLogInType = "Staff";
+                                Staff objform6 = new Staff();
+                                this.Hide();
+                                objform6.Show();
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("Incorrect Password or Username");
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invald login. Try again!");
+                            txtpass.Clear();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error occured...");
+                    }
+                    con.Close();
+                    return true;
+                    
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+
+        }
+       
 
 
         private void txtUname_TextChanged(object sender, EventArgs e)
@@ -206,6 +301,7 @@ namespace Project_Final
         {
 
         }
+      
     }
 }
 
