@@ -252,6 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 383);
             this.Controls.Add(this.cbRole);
             this.Controls.Add(this.lblRole);
@@ -275,6 +276,7 @@
             this.Controls.Add(this.txtSID);
             this.Controls.Add(this.label1);
             this.Name = "AddStaffMembers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStaffMembers";
             this.Load += new System.EventHandler(this.AddStaffMembers_Load);
             this.ResumeLayout(false);

@@ -24,7 +24,7 @@ namespace Project_Final
             checkbox.HeaderText = "Select";
             checkbox.Width = 25;
             checkbox.Name = "dvgcb";
-            dataGridView1.Columns.Insert(0, checkbox);
+            dvAdd.Columns.Insert(0, checkbox);
             dts.Clear();
             dts.Columns.Add("PID");
         }
@@ -53,7 +53,7 @@ namespace Project_Final
 
                 SqlCommand cmd1 = new SqlCommand("AddSelectedItems", Con);
                 cmd1.CommandType = CommandType.StoredProcedure;
-                foreach (DataGridViewRow dvr in dataGridView2.Rows)
+                foreach (DataGridViewRow dvr in dvSelected.Rows)
                 {
                     if (dvr.Cells[0].Value != null)
                     {
@@ -93,7 +93,7 @@ namespace Project_Final
                 SqlDataAdapter adapter = new SqlDataAdapter("Select * from Product", Con);
                 dtp.Clear();
                 adapter.Fill(dtp);
-                dataGridView1.DataSource = dtp;
+                dvAdd.DataSource = dtp;
                 if (Con.State == ConnectionState.Open)
                     Con.Close();
             }
@@ -103,7 +103,7 @@ namespace Project_Final
         private void AddProductBtn_Click(object sender, EventArgs e)
         {
             var SelectedProductsIndex = new List<int>();
-            foreach(DataGridViewRow dvr in dataGridView1.Rows)
+            foreach(DataGridViewRow dvr in dvAdd.Rows)
             {
                 bool isSelected = Convert.ToBoolean(dvr.Cells["dvgcb"].Value);
                 if (isSelected)
@@ -112,13 +112,13 @@ namespace Project_Final
                     SelectedProductsIndex.Add(crIndex);
                     dts.Rows.Add(dvr.Cells[1].Value);
                 }
-                dataGridView2.DataSource = dts;
+                dvSelected.DataSource = dts;
             }
             for(int i = SelectedProductsIndex.Count; i > 0; i--)
             {
                 dtp.Rows.RemoveAt(SelectedProductsIndex[i-1]);
             }
-            dataGridView1.DataSource = dtp;
+            dvAdd.DataSource = dtp;
         }
 
         private void dvSI_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -130,7 +130,7 @@ namespace Project_Final
         {
             LoadProductData();
             dts.Clear();
-            dataGridView2.DataSource = null;
+            dvSelected.DataSource = null;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace Project_Final
             txtPhoneNumber.Text = "";
             txtSpent.Text = "";
             dts.Clear();
-            dataGridView2.DataSource=dts;
+            dvSelected.DataSource=dts;
             LoadProductData();
         }
 

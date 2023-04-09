@@ -24,7 +24,7 @@ namespace Project_Final
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace Project_Final
             form.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             SPID_txt.Text = "";
             Name_txt.Text = "";
@@ -61,13 +61,18 @@ namespace Project_Final
             numb_txt.Text = "";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Suppliers form = new Suppliers();
             this.Close();
 
             form.LoadData();
             form.Show();
+
+        }
+
+        private void numb_txt_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

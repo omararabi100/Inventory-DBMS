@@ -39,12 +39,12 @@
             this.txtAID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dvAdd = new System.Windows.Forms.DataGridView();
+            this.dvSelected = new System.Windows.Forms.DataGridView();
             this.AddProductBtn = new System.Windows.Forms.Button();
             this.RemoveProductBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSelected)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClear
@@ -164,23 +164,27 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(160, 24);
             this.txtPhoneNumber.TabIndex = 48;
             // 
-            // dataGridView1
+            // dvAdd
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(234, 117);
-            this.dataGridView1.TabIndex = 49;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dvAdd.BackgroundColor = System.Drawing.Color.White;
+            this.dvAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dvAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvAdd.Location = new System.Drawing.Point(23, 177);
+            this.dvAdd.Name = "dvAdd";
+            this.dvAdd.Size = new System.Drawing.Size(234, 117);
+            this.dvAdd.TabIndex = 49;
+            this.dvAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridView2
+            // dvSelected
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(322, 177);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 117);
-            this.dataGridView2.TabIndex = 50;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dvSelected.BackgroundColor = System.Drawing.Color.White;
+            this.dvSelected.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dvSelected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvSelected.Location = new System.Drawing.Point(322, 177);
+            this.dvSelected.Name = "dvSelected";
+            this.dvSelected.Size = new System.Drawing.Size(240, 117);
+            this.dvSelected.TabIndex = 50;
+            this.dvSelected.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // AddProductBtn
             // 
@@ -206,11 +210,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(574, 412);
             this.Controls.Add(this.RemoveProductBtn);
             this.Controls.Add(this.AddProductBtn);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvSelected);
+            this.Controls.Add(this.dvAdd);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAID);
@@ -224,10 +229,11 @@
             this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add order";
             this.Load += new System.EventHandler(this.Form15_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSelected)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +252,8 @@
         private System.Windows.Forms.TextBox txtAID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dvAdd;
+        private System.Windows.Forms.DataGridView dvSelected;
         private System.Windows.Forms.Button AddProductBtn;
         private System.Windows.Forms.Button RemoveProductBtn;
     }

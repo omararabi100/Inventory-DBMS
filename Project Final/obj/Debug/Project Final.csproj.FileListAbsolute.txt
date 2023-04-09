@@ -199,7 +199,6 @@ C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Fina
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Staff.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Products.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.OrdersForm.resources
-C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Menuform.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Properties.Resources.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.RemoveOrder.resources
 C:\Users\wally\Source\Repos\Inventory-DBMS3\Project Final\obj\Debug\Project_Final.Suppliers.resources

@@ -40,6 +40,8 @@
             // 
             // dvgUsers
             // 
+            this.dvgUsers.BackgroundColor = System.Drawing.Color.White;
+            this.dvgUsers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgUsers.Location = new System.Drawing.Point(188, 51);
             this.dvgUsers.Name = "dvgUsers";
@@ -112,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(932, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
@@ -121,6 +124,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dvgUsers);
             this.Name = "ModifyUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateUser";
             this.Load += new System.EventHandler(this.RemoveUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).EndInit();

@@ -47,7 +47,7 @@ namespace Project_Final
                 SqlCommand cmdd = new SqlCommand("Select * from Product", con);
                 DataTable dtt = new DataTable();
                 dtt.Load(cmdd.ExecuteReader());
-                dataGridView1.DataSource = dtt;
+                dvProduct.DataSource = dtt;
 
 
             }
@@ -60,7 +60,7 @@ namespace Project_Final
                 con.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
             this.Hide();
@@ -72,7 +72,7 @@ namespace Project_Final
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -107,15 +107,11 @@ namespace Project_Final
             }
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            
+        private void btn_products_Click(object sender, EventArgs e)
+        {           
             Products objform = new Products();
             this.Hide();
-            objform.Show();
-            
-
-            
+            objform.Show();               
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -191,7 +187,7 @@ namespace Project_Final
             objform.Show();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btnRqPro_Click_1(object sender, EventArgs e)
         {
             Request_Products objform = new Request_Products();
             objform.ShowDialog();
@@ -199,11 +195,51 @@ namespace Project_Final
             
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void btnSuppliers_Click(object sender, EventArgs e)
         {
             Suppliers form = new Suppliers();
             this.Close();
             form.Show();
+        }
+
+        private void btnRequestProduct_Click(object sender, EventArgs e)
+        {
+            Request_Products objform = new Request_Products();
+            objform.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnSupp_Click(object sender, EventArgs e)
+        {
+            Suppliers form = new Suppliers();
+            this.Close();
+            form.Show();
+        }
+
+        private void btnPro_Click(object sender, EventArgs e)
+        {
+            Products objform = new Products();
+            this.Hide();
+            objform.Show();
+        }
+
+        private void btnDB_Click(object sender, EventArgs e)
+        {
+            ICmanager form = new ICmanager();
+            this.Close();
+            form.Show();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            SqlCommand cmd4 = new SqlCommand("Select * from Product where Name like '%" + txtSearch.Text + "%'", con);
+            DataTable dt4 = new DataTable();
+            dt4.Load(cmd4.ExecuteReader());
+            dvProduct.DataSource = dt4;
+            if (con.State == ConnectionState.Open)
+                con.Close();
         }
     }
 }

@@ -38,6 +38,7 @@
             // 
             // dvgOrder
             // 
+            this.dvgOrder.BackgroundColor = System.Drawing.Color.White;
             this.dvgOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgOrder.Location = new System.Drawing.Point(29, 104);
             this.dvgOrder.Name = "dvgOrder";
@@ -86,6 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(551, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
@@ -93,6 +95,7 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dvgOrder);
             this.Name = "RemoveOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveOrder";
             this.Load += new System.EventHandler(this.RemoveOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrder)).EndInit();

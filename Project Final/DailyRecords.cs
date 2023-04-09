@@ -78,5 +78,10 @@ namespace Project_Final
             this.Close();
             form.Show();
         }
+
+        private void txtRecordID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

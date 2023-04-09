@@ -40,7 +40,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(28, 294);
+            this.btnExit.Location = new System.Drawing.Point(8, 259);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(87, 23);
             this.btnExit.TabIndex = 13;
@@ -50,7 +50,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(485, 294);
+            this.btnUpdate.Location = new System.Drawing.Point(465, 259);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(87, 23);
             this.btnUpdate.TabIndex = 12;
@@ -101,10 +101,11 @@
             // 
             // dvgUsers
             // 
+            this.dvgUsers.BackgroundColor = System.Drawing.Color.White;
             this.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgUsers.Location = new System.Drawing.Point(210, 37);
             this.dvgUsers.Name = "dvgUsers";
-            this.dvgUsers.Size = new System.Drawing.Size(362, 204);
+            this.dvgUsers.Size = new System.Drawing.Size(342, 204);
             this.dvgUsers.TabIndex = 7;
             this.dvgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgUsers_CellContentClick);
             // 
@@ -112,7 +113,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 344);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(576, 290);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblSP);
@@ -121,6 +123,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dvgUsers);
             this.Name = "Salary";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salary";
             this.Load += new System.EventHandler(this.Salary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsers)).EndInit();

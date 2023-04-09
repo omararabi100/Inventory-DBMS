@@ -91,7 +91,30 @@ namespace Project_Final
 
         private void btnDash_Click(object sender, EventArgs e)
         {
-           
+            Staff staff = new Staff();
+            this.Hide();
+            staff.Show();
+        }
+
+        private void btnDB_Click(object sender, EventArgs e)
+        {
+            Staff staff = new Staff();
+            this.Hide();
+            staff.Show();
+        }
+
+        private void btnOrd_Click(object sender, EventArgs e)
+        {
+            OrdersForm form = new OrdersForm();
+            this.Close();
+            form.Show();
+        }
+
+        private void btnCus_Click(object sender, EventArgs e)
+        {
+            Customers form = new Customers();
+            this.Close();
+            form.Show();
         }
     }
 }

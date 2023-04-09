@@ -125,5 +125,17 @@ namespace Project_Final
             }
 
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            SqlCommand cmd4 = new SqlCommand("Select * from Staff where Name like '%" + txtSearch.Text + "%'", con);
+            DataTable dt4 = new DataTable();
+            dt4.Load(cmd4.ExecuteReader());
+            dvStaff.DataSource = dt4;
+            if (con.State == ConnectionState.Open)
+                con.Close();
+        }
     }
 }

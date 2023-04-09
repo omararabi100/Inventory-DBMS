@@ -137,7 +137,7 @@ namespace Project_Final
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
             this.Hide();
@@ -264,6 +264,10 @@ namespace Project_Final
             }
         }
 
+        private void btn_Click(object sender, EventArgs e)
+        {
+
         }
+    }
     
 }

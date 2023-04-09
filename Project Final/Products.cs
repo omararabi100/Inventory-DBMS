@@ -77,7 +77,39 @@ namespace Project_Final
             addProduct form = new addProduct();
             form.ShowDialog();
             this.Hide();
-        }   
-        
+        }
+
+        private void btnDB_Click_1(object sender, EventArgs e)
+        {
+            ICmanager form = new ICmanager();
+            this.Close();
+            form.Show();
+        }
+
+        private void btnPro_Click(object sender, EventArgs e)
+        {
+            Products objform = new Products();
+            this.Hide();
+            objform.Show();
+        }
+
+        private void btnSupp_Click(object sender, EventArgs e)
+        {
+            Suppliers form = new Suppliers();
+            this.Close();
+            form.Show();
+        }
+
+        private void btnRequestProduct_Click(object sender, EventArgs e)
+        {
+            Request_Products objform = new Request_Products();
+            objform.ShowDialog();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

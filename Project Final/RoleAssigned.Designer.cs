@@ -86,12 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(248, 165);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbRoll);
             this.Controls.Add(this.lblChange);
             this.Name = "RoleAssigned";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "labe";
             this.Load += new System.EventHandler(this.RoleAssigned_Load);
             this.ResumeLayout(false);

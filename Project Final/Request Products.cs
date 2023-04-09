@@ -143,6 +143,11 @@ namespace Project_Final
             this.Hide();
             objform5.Show();
         }
+
+        private void dvcart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

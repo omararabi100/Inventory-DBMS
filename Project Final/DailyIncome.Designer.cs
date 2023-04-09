@@ -60,6 +60,7 @@
             this.txtRecordID.Name = "txtRecordID";
             this.txtRecordID.Size = new System.Drawing.Size(200, 20);
             this.txtRecordID.TabIndex = 1;
+            this.txtRecordID.TextChanged += new System.EventHandler(this.txtRecordID_TextChanged);
             // 
             // label1
             // 
@@ -190,6 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(649, 200);
             this.Controls.Add(this.txtTaxes);
             this.Controls.Add(this.txtMain);
@@ -208,6 +210,7 @@
             this.Controls.Add(this.txtRecordID);
             this.Controls.Add(this.dtDate);
             this.Name = "DailyRecords";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DailyRecords";
             this.Load += new System.EventHandler(this.DailyIncome_Load);
             this.ResumeLayout(false);

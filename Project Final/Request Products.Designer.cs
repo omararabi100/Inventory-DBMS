@@ -40,23 +40,28 @@
             // 
             // dvProduct
             // 
+            this.dvProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dvProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvProduct.Location = new System.Drawing.Point(41, 22);
+            this.dvProduct.Location = new System.Drawing.Point(12, 28);
             this.dvProduct.Name = "dvProduct";
-            this.dvProduct.Size = new System.Drawing.Size(240, 150);
+            this.dvProduct.Size = new System.Drawing.Size(874, 150);
             this.dvProduct.TabIndex = 0;
             // 
             // dvcart
             // 
+            this.dvcart.BackgroundColor = System.Drawing.Color.White;
+            this.dvcart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvcart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvcart.Location = new System.Drawing.Point(416, 22);
+            this.dvcart.Location = new System.Drawing.Point(892, 28);
             this.dvcart.Name = "dvcart";
-            this.dvcart.Size = new System.Drawing.Size(240, 150);
+            this.dvcart.Size = new System.Drawing.Size(251, 150);
             this.dvcart.TabIndex = 1;
+            this.dvcart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvcart_CellContentClick);
             // 
             // btnAddtoCart
             // 
-            this.btnAddtoCart.Location = new System.Drawing.Point(111, 219);
+            this.btnAddtoCart.Location = new System.Drawing.Point(91, 202);
             this.btnAddtoCart.Name = "btnAddtoCart";
             this.btnAddtoCart.Size = new System.Drawing.Size(75, 23);
             this.btnAddtoCart.TabIndex = 2;
@@ -66,7 +71,7 @@
             // 
             // btnRemoveItem
             // 
-            this.btnRemoveItem.Location = new System.Drawing.Point(479, 219);
+            this.btnRemoveItem.Location = new System.Drawing.Point(925, 202);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(116, 23);
             this.btnRemoveItem.TabIndex = 3;
@@ -76,7 +81,7 @@
             // 
             // btnRequestItem
             // 
-            this.btnRequestItem.Location = new System.Drawing.Point(597, 319);
+            this.btnRequestItem.Location = new System.Drawing.Point(1047, 225);
             this.btnRequestItem.Name = "btnRequestItem";
             this.btnRequestItem.Size = new System.Drawing.Size(96, 23);
             this.btnRequestItem.TabIndex = 4;
@@ -86,7 +91,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 319);
+            this.btnExit.Location = new System.Drawing.Point(12, 225);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -98,7 +103,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 354);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1148, 254);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRequestItem);
             this.Controls.Add(this.btnRemoveItem);
@@ -106,6 +112,7 @@
             this.Controls.Add(this.dvcart);
             this.Controls.Add(this.dvProduct);
             this.Name = "Request_Products";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Request_Products";
             this.Load += new System.EventHandler(this.Request_Products_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvProduct)).EndInit();
