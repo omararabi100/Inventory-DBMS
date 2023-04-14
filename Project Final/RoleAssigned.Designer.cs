@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleAssigned));
             this.lblChange = new System.Windows.Forms.Label();
             this.cbRoll = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -38,9 +39,10 @@
             // 
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(12, 11);
+            this.lblChange.Location = new System.Drawing.Point(16, 14);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(132, 20);
+            this.lblChange.Size = new System.Drawing.Size(165, 25);
             this.lblChange.TabIndex = 0;
             this.lblChange.Text = "Change X\'s Role:";
             this.lblChange.Click += new System.EventHandler(this.label1_Click);
@@ -56,17 +58,19 @@
             "Cleark",
             "Loader",
             "Forklift Operator"});
-            this.cbRoll.Location = new System.Drawing.Point(15, 34);
+            this.cbRoll.Location = new System.Drawing.Point(20, 42);
+            this.cbRoll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRoll.Name = "cbRoll";
-            this.cbRoll.Size = new System.Drawing.Size(221, 21);
+            this.cbRoll.Size = new System.Drawing.Size(293, 24);
             this.cbRoll.TabIndex = 2;
             this.cbRoll.SelectedIndexChanged += new System.EventHandler(this.cbRoll_SelectedIndexChanged);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 130);
+            this.btnExit.Location = new System.Drawing.Point(16, 160);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(100, 28);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(161, 130);
+            this.btnUpdate.Location = new System.Drawing.Point(215, 160);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -84,14 +89,16 @@
             // 
             // RoleAssigned
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(248, 165);
+            this.ClientSize = new System.Drawing.Size(331, 203);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbRoll);
             this.Controls.Add(this.lblChange);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RoleAssigned";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "labe";

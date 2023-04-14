@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrder));
             this.btnClear = new System.Windows.Forms.Button();
             this.btmExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,10 +51,10 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(11, 374);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Location = new System.Drawing.Point(15, 460);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(64, 26);
+            this.btnClear.Size = new System.Drawing.Size(85, 32);
             this.btnClear.TabIndex = 42;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -62,10 +63,10 @@
             // btmExit
             // 
             this.btmExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmExit.Location = new System.Drawing.Point(426, 374);
-            this.btmExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btmExit.Location = new System.Drawing.Point(568, 460);
+            this.btmExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btmExit.Name = "btmExit";
-            this.btmExit.Size = new System.Drawing.Size(64, 26);
+            this.btmExit.Size = new System.Drawing.Size(85, 32);
             this.btmExit.TabIndex = 41;
             this.btmExit.Text = "Exit";
             this.btmExit.UseVisualStyleBackColor = true;
@@ -75,29 +76,28 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 28);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(12, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 20);
+            this.label6.Size = new System.Drawing.Size(31, 25);
             this.label6.TabIndex = 40;
             this.label6.Text = "ID";
             // 
             // txtOID
             // 
             this.txtOID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOID.Location = new System.Drawing.Point(69, 27);
-            this.txtOID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOID.Location = new System.Drawing.Point(92, 33);
+            this.txtOID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOID.Name = "txtOID";
-            this.txtOID.Size = new System.Drawing.Size(160, 24);
+            this.txtOID.Size = new System.Drawing.Size(212, 28);
             this.txtOID.TabIndex = 38;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(494, 374);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(659, 460);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(69, 26);
+            this.btnAdd.Size = new System.Drawing.Size(92, 32);
             this.btnAdd.TabIndex = 36;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -107,20 +107,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(345, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.Size = new System.Drawing.Size(137, 25);
             this.label2.TabIndex = 39;
             this.label2.Text = "Amount Spent";
             // 
             // txtSpent
             // 
             this.txtSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpent.Location = new System.Drawing.Point(388, 28);
-            this.txtSpent.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSpent.Location = new System.Drawing.Point(517, 34);
+            this.txtSpent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSpent.Name = "txtSpent";
-            this.txtSpent.Size = new System.Drawing.Size(160, 24);
+            this.txtSpent.Size = new System.Drawing.Size(212, 28);
             this.txtSpent.TabIndex = 37;
             this.txtSpent.TextChanged += new System.EventHandler(this.txtSpent_TextChanged);
             // 
@@ -128,40 +127,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 77);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 20);
+            this.label1.Size = new System.Drawing.Size(45, 25);
             this.label1.TabIndex = 43;
             this.label1.Text = "AID";
             // 
             // txtAID
             // 
             this.txtAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAID.Location = new System.Drawing.Point(69, 73);
-            this.txtAID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAID.Location = new System.Drawing.Point(92, 90);
+            this.txtAID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAID.Name = "txtAID";
-            this.txtAID.Size = new System.Drawing.Size(160, 24);
+            this.txtAID.Size = new System.Drawing.Size(212, 28);
             this.txtAID.TabIndex = 44;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(259, 80);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(345, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 20);
+            this.label5.Size = new System.Drawing.Size(143, 25);
             this.label5.TabIndex = 47;
             this.label5.Text = "Phone Number";
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(388, 75);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(517, 92);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(160, 24);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(212, 28);
             this.txtPhoneNumber.TabIndex = 48;
             // 
             // dvAdd
@@ -169,9 +166,11 @@
             this.dvAdd.BackgroundColor = System.Drawing.Color.White;
             this.dvAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvAdd.Location = new System.Drawing.Point(23, 177);
+            this.dvAdd.Location = new System.Drawing.Point(31, 218);
+            this.dvAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvAdd.Name = "dvAdd";
-            this.dvAdd.Size = new System.Drawing.Size(234, 117);
+            this.dvAdd.RowHeadersWidth = 51;
+            this.dvAdd.Size = new System.Drawing.Size(312, 144);
             this.dvAdd.TabIndex = 49;
             this.dvAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -180,17 +179,20 @@
             this.dvSelected.BackgroundColor = System.Drawing.Color.White;
             this.dvSelected.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvSelected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvSelected.Location = new System.Drawing.Point(322, 177);
+            this.dvSelected.Location = new System.Drawing.Point(429, 218);
+            this.dvSelected.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvSelected.Name = "dvSelected";
-            this.dvSelected.Size = new System.Drawing.Size(240, 117);
+            this.dvSelected.RowHeadersWidth = 51;
+            this.dvSelected.Size = new System.Drawing.Size(320, 144);
             this.dvSelected.TabIndex = 50;
             this.dvSelected.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // AddProductBtn
             // 
-            this.AddProductBtn.Location = new System.Drawing.Point(82, 319);
+            this.AddProductBtn.Location = new System.Drawing.Point(109, 393);
+            this.AddProductBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddProductBtn.Name = "AddProductBtn";
-            this.AddProductBtn.Size = new System.Drawing.Size(83, 23);
+            this.AddProductBtn.Size = new System.Drawing.Size(111, 28);
             this.AddProductBtn.TabIndex = 51;
             this.AddProductBtn.Text = "Add Item";
             this.AddProductBtn.UseVisualStyleBackColor = true;
@@ -198,9 +200,10 @@
             // 
             // RemoveProductBtn
             // 
-            this.RemoveProductBtn.Location = new System.Drawing.Point(388, 319);
+            this.RemoveProductBtn.Location = new System.Drawing.Point(517, 393);
+            this.RemoveProductBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RemoveProductBtn.Name = "RemoveProductBtn";
-            this.RemoveProductBtn.Size = new System.Drawing.Size(83, 23);
+            this.RemoveProductBtn.Size = new System.Drawing.Size(111, 28);
             this.RemoveProductBtn.TabIndex = 52;
             this.RemoveProductBtn.Text = "Remove Item";
             this.RemoveProductBtn.UseVisualStyleBackColor = true;
@@ -208,10 +211,10 @@
             // 
             // AddOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(574, 412);
+            this.ClientSize = new System.Drawing.Size(765, 507);
             this.Controls.Add(this.RemoveProductBtn);
             this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.dvSelected);
@@ -227,7 +230,8 @@
             this.Controls.Add(this.txtSpent);
             this.Controls.Add(this.txtOID);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add order";
